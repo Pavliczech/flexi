@@ -1,0 +1,17 @@
+RewriteEngine on
+
+
+RewriteRule    ^admin/(.*)															index.php?admin_modules=1&$1
+
+
+RewriteRule		^data/cache/tpl_conf												/ [R]
+RewriteRule		^data/cache/tpl_c													/ [R]
+RewriteRule		^data/cache/tpl														/ [R]
+RewriteRule		^data/cache/conf													/ [R]
+RewriteRule		^app																/ [R]
+RewriteRule		^tpl																/ [R]
+
+<Files ~ "\.tpl$">
+	Order allow,deny
+	Deny from all
+</Files>
