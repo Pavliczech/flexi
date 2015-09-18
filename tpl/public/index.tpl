@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 	<meta name="robots" content="noindex,nofollow" />
 	
-	<link href="/layout/css/theme.css" rel="stylesheet"  />
+	<link href="/data/cache/css/{$css}" rel="stylesheet"  />
 	<link href="/layout/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 	<title>FLEXI CMS</title>

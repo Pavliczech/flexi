@@ -93,16 +93,33 @@ else {
 
 /*
 
+LESS COMPILER (COMPILING LESS FILES INTO CSS)
+
+*/
+$less_compiler_file = $_SERVER["DOCUMENT_ROOT"] . "/app/core/less_compiler/Autoloader.php";
+if(file_exists($less_compiler_file)){
+	include_once($less_compiler_file);
+	Less_Autoloader::register();
+	$less = new Less_Parser($config["less_parser"]);
+}
+else {
+	die($less_compiler_file . " not found!");
+}
+
+
+
+/*
+
 LETS LOAD UP SYSTEM NOW
 
 */
 
-$module = new module($config,$tpl,$core);
+$module = new module($config,$tpl,$core,$less);
 $module->init();
 
 class module {
 
-	public function __construct($config,$tpl,$core){
+	public function __construct($config,$tpl,$core,$less){
 
 		// SET CONFIG 
 		$this->config = $config;
@@ -112,11 +129,14 @@ class module {
 
 		// SET TEMPLATE ENGINE
 		$this->tpl = $tpl;
+		
+		// SET TEMPLATE ENGINE
+		$this->less = $less;
 
 	}
 
 	public function init(){
-		echo $this->tpl->display("public/index.tpl");
+		
 
 		
 		
@@ -128,9 +148,33 @@ class module {
 			
 		}
 		
+	
+		try{
+			$less_file = $_SERVER["DOCUMENT_ROOT"] . "/theme/public/less/test.less";
+	
+			/*$this->less->parseFile($less_file);
+			$css = $this->less->getCSS();
+
+			echo $css;*/
+			
+			$less_files = array($less_file => "/");
+			$css_file_name = Less_Cache::Get($less_files, $this->config['less_parser']);
+			$this->tpl->assign("css",$css_file_name);
+			
+			
+		}
+		catch(Exception $e){
+			core::debug($e->getMessage());
+		}
+		
+		echo $this->tpl->display("public/index.tpl");
+		
+
+		
+		/*
 		for($i = 2; $i<=100;$i++){
 			echo "<br />" . $i . ". Hello world!";
-		}
+		}*/
 		
 		/*
 		

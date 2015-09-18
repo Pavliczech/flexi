@@ -54,6 +54,17 @@ $config['smarty_debug']					= false;
 // SECURITY KEYS
 $config['db_pswsalt']				= "TO DO";
 
+/*
+
+LESS PARSER SETTINGS
+
+*/
+$config['less_parser'] = array(
+	"cache_dir" => $_SERVER["DOCUMENT_ROOT"] . "/data/cache/css",
+	"compress" => true,
+	'sourceMap' => true
+);
+
 
 // DATABASE CONNECTION
 /*
