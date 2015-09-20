@@ -1,7 +1,7 @@
 RewriteEngine on
 
 
-RewriteRule    ^admin/(.*)															index.php?admin_modules=1&$1
+RewriteRule    ^admin/(.*)															index.php?admin=1&$1
 
 
 RewriteRule		^data/cache/tpl_conf												/ [R]

@@ -139,23 +139,31 @@ class module {
 		
 
 		
+		if($this->config["version"]=="dev"){
+			$this->tpl->assign("less","router.less");
+		}
+		else {
+			$this->tpl->assign("css","router.css");
+		}
 		
 		
-		if($this->core->get("admin_modules")){
-			core::debug("load admincenter");
+		if($this->core->get("admin")){
+			
+			echo $this->tpl->display("admin/index.tpl");
 		}
 		else {
 			
+			echo $this->tpl->display("public/index.tpl");
 		}
-		
+		/*
 	
 		try{
 			$less_file = $_SERVER["DOCUMENT_ROOT"] . "/theme/public/less/test.less";
 	
-			/*$this->less->parseFile($less_file);
-			$css = $this->less->getCSS();
+			//$this->less->parseFile($less_file);
+			//$css = $this->less->getCSS();
 
-			echo $css;*/
+			//echo $css;
 			
 			$less_files = array($less_file => "/");
 			$css_file_name = Less_Cache::Get($less_files, $this->config['less_parser']);
@@ -165,9 +173,11 @@ class module {
 		}
 		catch(Exception $e){
 			core::debug($e->getMessage());
-		}
+		}*/
 		
-		echo $this->tpl->display("public/index.tpl");
+		
+		
+
 		
 
 		

@@ -1,5 +1,8 @@
 <?php
 
+$config = array();
+
+
 /*
 
 MAIN CONFIGURATION
@@ -20,13 +23,22 @@ header('Content-Type: text/html; charset=utf-8');
 header('X-Frame-Options: SAMEORIGIN');
 header("X-XSS-Protection: 1; mode=block");
 
-/** DEBUG MODE **/
+/*
+	// DEBUG MODE 
+	// ECHOING DEBUG INFO INTO PAGE (WHICH MODULES LOADED ETC)
+*/
 define("CORE_DEBUG",true);
+
+/*
+	// USED FOR LESS VS CSS OR FULL VS MINIFIED JS FILES FOR PUBLIC VERSION
+	// OPTIONS: dev, pub
+*/
+$config["version"] = "dev";
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
-$config = array();
+
 $config["build"] = "0001";
 
 
