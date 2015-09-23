@@ -4,222 +4,187 @@ THEME
 
 */
 
+html, body {
+	height: 100%; /* 100% HEIGHT "HACK" */
+}
 
 body {
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	line-height: 1.4;
 	color: #2c2c2c;
+	background: #f1f1f1;
 }
-
-
 
 /*
 
 HEADER
 
 */
+
 .site_header {
-	
+	background: white;
+	border-bottom: 1px solid #dedede;
+	height: 81px;
+
 	&:after {
 		.clear();
 	}
-	
-	.hotdog {
-		display: block;
-		width: 65px;
-		height: 65px;
+
+	/* LOGO */
+	.logo {
+		position: relative;
 		float: left;
-		background: #373737;
-		line-height: 65px;
-		padding: 0 0 0 20px;
-		cursor: pointer;
-		transition: 500ms;
-		
-		&:before {
-			font-family: FontAwesome;
+		width: 250px;
+		height: 80px;
+		background: #34aaed;
+
+		h1 {
+			position: absolute;
+			top: 20px;
+			left: 80px;
 			font-size: 30px;
-			content: "\f0c9";
-			color: rgba(0,0,0,0.5);
-		}
-	}
-	
-	&.menu_toggled .hotdog {
-		width: 300px;
-		
-		&:before {
+			font-weight: 600;
 			color: white;
+
+			small {
+				font-size: 11px;
+				color: #005c90;
+			}
 		}
-		
+
+		.hotdog {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			border: 1px solid rgba(255,255,255,0.3);
+			border-radius: 4px;
+			cursor: pointer;
+			text-decoration: none;
+			color: rgba(255,255,255,0.8);
+			transition: 200ms;
+
+			&:hover {
+				background: white;
+				border-color: white;
+				color: #34aaed;
+			}
+
+			&:active {
+				background: #1f85bf;
+				border-color: #1f85bf;
+				color: white;
+			}
+
+			&:before {
+				font-family: FontAwesome;
+				font-size: 18px;
+				content: "\f0c9";
+			}
+		}
 	}
-	
-	.inside {
-		height: 65px;
-		background: #f9f9f9;
-		border-bottom: 1px solid #f5f5f5;
+
+	& > .inside {
+		padding: 20px;
+		overflow: hidden;
+		line-height: 40px;
+		color: #626262;
+
+		.user {
+			float: left;
+
+			.avatar {
+				width: 40px;
+				height: 40px;
+				border-radius: 50px;
+				float: left;
+				margin-right: 15px;
+			}
+
+			.logged {
+				overflow: hidden;
+
+				a {
+					font-weight: bold;
+					color: #34aaed;
+					text-decoration: none;
+
+					&:hover {
+						color: black;
+					}
+				}
+			}
+		}
+
+		.actions {
+			float: right;
+
+			a {
+				display: inline-block;
+				padding: 0 15px;
+				line-height: 40px;
+				font-size: 13px;
+				color: inherit;
+				text-decoration: none;
+				cursor: pointer; /* DEBUG ONLY */
+
+				&:hover {
+					background: rgba(0,0,0,0.03);
+				}
+
+				&:active {
+					color: #34aaed;;
+				}
+
+				&:before {
+					font-family: FontAwesome;
+					margin-right: 5px;
+				}
+
+				&.notifications:before {
+					content: "\f071";
+				}
+
+				&.settings:before {
+					content: "\f013";
+				}
+
+				&.logout:before {
+					content: "\f08b";
+				}
+			}
+		}
 	}
 }
 
 /*
 
-CONTENT AREA
+CONTENT
 
 */
-.site_content_wrap {
+.site_content {
 	position: relative;
-	min-height: 1000px;
-	padding-left: 65px;
-	transition: 500ms padding;
-	/*
-	&:before {
-		
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		content: "";
-		width: 65px;
-		background: #2c2c2c;
-		z-index: 1;
-		transition: 500ms;
-	}
-	
-	&.menu_open:before {
-		width: 300px;
-	}*/
-	
-	&.menu_toggled {
-		padding-left: 300px;
-	}
-	
+	min-height: 100%;
+	padding-left: 250px;
+
 	&:after {
 		.clear();
 	}
-	
-	& > aside.site_sidebar {
+
+	& > .sidebar {
 		position: absolute;
-		top: 0;
+		top: -1px;
 		left: 0;
 		bottom: 0;
-		z-index: 2;
-		width: 300px;
-		background: #2c2c2c;
-		margin-left: -235px;
-		transition: 500ms;
-		
-		&:hover {
-			margin-left: 0;
-		}
-		
-		ul.menu {
-			width: 300px;
-
-			& > li {
-				& > a {
-					position: relative;
-					display: block;
-					padding: 20px 40px 20px 20px;
-					font-size: 15px;
-					color: white;
-					text-decoration: none;
-					
-					&:hover {
-						background: rgba(255,255,255,0.05);
-					}
-
-					&:before {
-						position: absolute;
-						top: 10px;
-						right: 13px;
-						width: 40px;
-						height: 40px;
-						line-height: 40px;
-						font-family: FontAwesome;
-						text-align: center;
-						content: "";
-						background: #212121;
-						color: rgba(255,255,255,0.5);
-					}
-					
-					&:hover:before {
-						color: white;
-					}
-					
-					&.dashboard:before {
-						content: "\f1fe";
-					}
-					
-					&.settings:before {
-						content: "\f013";
-					}
-					
-					&.development:before {
-						content: "\f085";
-					}
-					
-					&.pages:before {
-						content: "\f0f6";
-					}
-					
-					&.users:before {
-						content: "\f0c0";
-					}
-				}
-			}
-		}
+		width: 250px;
+		background: #242425;
 	}
-	
-	&.menu_toggled  > aside.site_sidebar {
-		margin-left: 0;
-	}
-	
+
 	& > .content {
-		overflow: hidden;
 		padding: 20px;
-		
-		/* DEFAULT TEXT STYLES */
-		h1 {
-			padding: 15px 0;
-			font-size: 30px;
-			font-weight: 500;
-			color: #00adfe;
-		}
-		
-		h2 {
-			padding: 15px 0;
-			font-size: 27px;
-			font-weight: 500;
-			color: #00adfe;
-		}
-		
-		h3{
-			padding: 10px 0;
-			font-size: 22px;
-			font-weight: 500;
-			color: #00adfe;
-		}
-		
-		h4 {
-			padding: 7px 0;
-			font-size: 18px;
-			font-weight: 500;
-			color: #00adfe;
-		}
-	
 	}
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
