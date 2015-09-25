@@ -24,13 +24,11 @@
 			};
 		</script>
 		<script src="/libs/less-js/less.min.js" type="text/javascript"></script>
-	
 	{else}
-	
-	
+		<link href="/data/cache/css/{$css}" rel="stylesheet" />
 	{/if}
 	
-	<link href="/data/cache/css/{$css}" rel="stylesheet"  />
+
 	<link href="/layout/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 	<title>FLEXI CMS</title>
@@ -39,7 +37,7 @@
 
 
 <h1>Hello world!</h1>
-
+<a href="/admin/">admin panel</a>
 
 </body>
 </html>

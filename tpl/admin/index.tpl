@@ -26,7 +26,8 @@
 		<link href="/data/cache/css/{$css}" rel="stylesheet"  />
 	{/if}
 	
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="/libs/jquery/jquery-2.1.4.min.js"></script>
+	<script src="/libs/ui/ui.js"></script>
 
 	<link href="/layout/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -65,8 +66,77 @@
 			
 		</aside>
 		<div class="content">
+			<header>
+				<ul class="ui_pagepath">
+					<li><a href="#">Admin</a></li>
+					<li><a href="#">some subpage</a></li>
+					<li><a href="#">some extra page</a></li>
+					<li><a href="#">actual admin page</a></li>
+				</ul>
+				<h1>Dashboard</h1>
+			</header>
 			
-			dsgds
+			<div class="row">
+				<div class="col-md-4">
+					<div class="ui_widget">
+						<header>
+							<h2 class="title">Widget box</h2>
+							<div class="actions">
+								<a href="#" class="add"></a>
+								<a href="#" class="edit"></a>
+								<a href="#" class="toggle"></a>
+							</div>
+						</header>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							In faucibus, enim sit amet condimentum posuere, neque 
+							ante tristique libero, vel viverra diam massa lacinia justo. 
+							Class aptent taciti sociosqu ad litora torquent per 
+							conubia nostra, per inceptos himenaeos.
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+					<div class="ui_widget dark">
+						<header>
+							<h2 class="title">Widget box</h2>
+							<div class="actions">
+								<a href="#" class="add"></a>
+								<a href="#" class="edit"></a>
+								<a href="#" class="toggle"></a>
+							</div>
+						</header>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							In faucibus, enim sit amet condimentum posuere, neque 
+							ante tristique libero, vel viverra diam massa lacinia justo. 
+							Class aptent taciti sociosqu ad litora torquent per 
+							conubia nostra, per inceptos himenaeos.
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+					<div class="ui_widget blue">
+						<header>
+							<h2 class="title">Widget box</h2>
+							<div class="actions">
+								<a href="#" class="add"></a>
+								<a href="#" class="edit"></a>
+								<a href="#" class="toggle"></a>
+							</div>
+						</header>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							In faucibus, enim sit amet condimentum posuere, neque 
+							ante tristique libero, vel viverra diam massa lacinia justo. 
+							Class aptent taciti sociosqu ad litora torquent per 
+							conubia nostra, per inceptos himenaeos.
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </body>
