@@ -81,14 +81,13 @@ HEADER
 			color: rgba(255,255,255,0.8);
 			transition: 200ms;
 
-			&:hover,
-			&.active {
+			&:hover {
 				background: white;
 				border-color: white;
 				color: #34aaed;
 			}
 
-			&:active {
+			&.active {
 				background: #1f85bf;
 				border-color: #1f85bf;
 				color: white;
@@ -157,6 +156,10 @@ HEADER
 				&:before {
 					font-family: FontAwesome;
 					margin-right: 5px;
+					
+					@media (max-width:767px){
+						margin: 0;
+					}
 				}
 
 				&.notifications:before {
@@ -169,6 +172,13 @@ HEADER
 
 				&.logout:before {
 					content: "\f08b";
+				}
+				
+				// ONLY ICONS FOR SMALL DEVICES
+				@media (max-width:767px){
+					span {
+						display: none;
+					}
 				}
 			}
 		}
@@ -185,7 +195,7 @@ CONTENT
 	min-height: 100%;
 	padding-left: 250px;
 	transition: 500ms padding;
-	
+
 	&.closed {
 		padding-left: 85px;
 	}
@@ -203,7 +213,7 @@ CONTENT
 		background: #242425;
 		overflow: hidden;
 		transition: 500ms;
-		
+
 		&.closed {
 			width: 85px;
 		}
@@ -361,10 +371,10 @@ CONTENT
 					display: block;
 				}
 			}
-			
+
 			&.closed > li > a {
 				padding: 20px 0 20px 85px;
-				
+
 				&:before {
 					width: 40px;
 					height: 40px;
@@ -374,22 +384,20 @@ CONTENT
 					top: 10px;
 				}
 			}
-			
+
 			&.closed > li > ul {
 				display: none; /* OVERRIDE EVEN OPENED MENUS */
 			}
-			
-			
 		}
 	}
 
 	& > .content {
 		padding: 20px;
-		
+
 		& > header {
 			margin: -20px -20px 0px -20px;
 			padding: 20px 20px 20px 20px;
-			
+
 			& > h1 {
 				padding: 0;
 				margin: 0;
@@ -400,3 +408,4 @@ CONTENT
 		}
 	}
 }
+

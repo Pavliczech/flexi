@@ -1,3 +1,26 @@
+<?php /* Smarty version 3.1.28-dev/61, created on 2015-09-27 21:56:14
+         compiled from "C:\Webserver\htdocs\flexi\tpl\admin\index.tpl" */ ?>
+<?php
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'has_nocache_code' => false,
+  'version' => '3.1.28-dev/61',
+  'unifunc' => 'content_560849de3d6b42_72256091',
+  'file_dependency' => 
+  array (
+    'af700cc1955e13669c5edf28ef17d164a89c31bb' => 
+    array (
+      0 => 'C:\\Webserver\\htdocs\\flexi\\tpl\\admin\\index.tpl',
+      1 => 1443383602,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false);
+if ($_valid && !is_callable('content_560849de3d6b42_72256091')) {
+function content_560849de3d6b42_72256091 ($_smarty_tpl) {
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -6,9 +29,11 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300,300italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-	{if isset($less)}
-		<link rel="stylesheet/less" href="{$less}" />
-		<script>
+	<?php if (isset($_smarty_tpl->tpl_vars['less']->value)) {?>
+		<link rel="stylesheet/less" href="<?php echo $_smarty_tpl->tpl_vars['less']->value;?>
+" />
+		<?php echo '<script'; ?>
+>
 			less = {
 				env: "development",
 				async: false,
@@ -18,16 +43,24 @@
 				dumpLineNumbers: "comments",
 				relativeUrls: false
 			};
-		</script>
-		<script src="/libs/less-js/less.min.js" type="text/javascript"></script>
+		<?php echo '</script'; ?>
+>
+		<?php echo '<script'; ?>
+ src="/libs/less-js/less.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
 	
-	{else}
+	<?php } else { ?>
 	
-		<link href="/data/cache/css/{$css}" rel="stylesheet"  />
-	{/if}
+		<link href="/data/cache/css/<?php echo $_smarty_tpl->tpl_vars['css']->value;?>
+" rel="stylesheet"  />
+	<?php }?>
 	
-	<script src="/libs/jquery/jquery-2.1.4.min.js"></script>
-	<script src="/libs/ui/ui.js"></script>
+	<?php echo '<script'; ?>
+ src="/libs/jquery/jquery-2.1.4.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="/libs/ui/ui.js"><?php echo '</script'; ?>
+>
 
 	<link href="/layout/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -266,3 +299,5 @@
 	</section>
 </body>
 </html>
+<?php }
+}

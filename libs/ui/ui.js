@@ -22,6 +22,18 @@ $(document).ready(function () {
 		$(".site_content .sidebar ul.menu").toggleClass('closed');
 		$(this).toggleClass('active');
 	});
+	
+	
+	// UI BOX CLOSE-OPEN TOGGLE
+	$( ".ui_box .header .close" ).click(function() {
+		$(this).parent().parent().parent(".ui_box").toggleClass('closed');
+		$(this).toggleClass('active')
+	});
+	
+	// UI MESSAGE CLOSE-OPEN TOGGLE
+	$( ".ui_message .close" ).click(function() {
+		$(this).parent(".ui_message").addClass('closed');
+	});
 
 
 });
@@ -49,21 +61,4 @@ $( "#admin_sidebar div.opener" ).click(function() {
 	$(this).toggleClass('active')
 });
 
-// FOR MOBILE - HOTDOG
-$( "#main_menu_hotdog" ).click(function() {
-	$("#admin_sidebar").toggleClass("opened");
-});
-
-// UI BOX CLOSE-OPEN TOGGLE
-$( ".ui_box .header .close" ).click(function() {
-	$(this).parent().parent().parent(".ui_box").toggleClass('closed');
-	$(this).toggleClass('active')
-});
-
-// UI MESSAGE CLOSE-OPEN TOGGLE
-$( ".ui_message .close" ).click(function() {
-	$(this).parent(".ui_message").addClass('closed');
-});
-
 */
-// MAIN CONTENT WINDOWS RESIZE
