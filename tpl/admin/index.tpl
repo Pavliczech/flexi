@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300,300italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 	{if isset($less)}
-		<link rel="stylesheet/less" href="/theme/admin/less/{$less}" />
+		<link rel="stylesheet/less" href="{$less}" />
 		<script>
 			less = {
 				env: "development",
@@ -62,7 +62,60 @@
 	</section>
 	<section class="site_content">
 		<aside class="sidebar">
-			SIDE
+			<ul class="menu">
+				<li class="active">
+					<a href="#" class="dashboard">Dashboard</a>
+				</li>
+				<li>
+					<a href="#" class="settings">Settings</a>
+					<span class="arrow"></span>
+					<ul>
+						<li>
+							<a href="#" class="database">Database</a>
+						</li>
+						<li>
+							<a href="#" class="performance">Performance</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="layout">Layout</a>
+				</li>
+				<li>
+					<a href="#" class="users">Users</a>
+					<span class="arrow"></span>
+					<ul>
+						<li>
+							<a href="#" class="admins">Administrators</a>
+						</li>
+						<li>
+							<a href="#" class="users">Users</a>
+						</li>
+						<li>
+							<a href="#" class="banlist">Banlist</a>
+						</li>
+						<li>
+							<a href="#" class="whitelist">Whitelist</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="pages">Pages</a>
+				</li>
+				<li>
+					<a href="#" class="forum">Forum</a>
+					<span class="arrow"></span>
+					<ul>
+						<li>
+							<a href="#" class="topics">Topics</a>
+						</li>
+						<li>
+							<a href="#" class="reports">Reports</a>
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
 			
 		</aside>
 		<div class="content">

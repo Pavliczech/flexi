@@ -137,13 +137,29 @@ class module {
 
 	public function init(){
 		
-
 		
-		if($this->config["version"]=="dev"){
-			$this->tpl->assign("less","router.less");
+		/* ADD THESE IN CONFIG FILE */
+		if($this->core->get("admin")){
+			$less_files = "/theme/admin/less/router.less";
 		}
 		else {
-			$this->tpl->assign("css","router.css");
+			$less_files = "/theme/public/less/router.less";
+		}
+		/* IN DEV MODE LESS IS COMPILES BY JAVASCRIPT - ITS FASTER */
+		if($this->config["version"]=="dev"){
+			$this->tpl->assign("less",$less_files);
+		}
+		else {
+			try{
+				// ADD ARRAY SUPPORT FOR MORE FILES TO COMPILE (dont need that now)
+				$less_files = $_SERVER["DOCUMENT_ROOT"] . $less_files;
+				$less_files = array($less_files => "/");
+				$css_file_name = Less_Cache::Get($less_files, $this->config['less_parser']);
+				$this->tpl->assign("css",$css_file_name);
+			}
+			catch(Exception $e){
+				core::debug($e->getMessage());
+			}
 		}
 		
 		
@@ -155,25 +171,7 @@ class module {
 			
 			echo $this->tpl->display("public/index.tpl");
 		}
-		/*
-	
-		try{
-			$less_file = $_SERVER["DOCUMENT_ROOT"] . "/theme/public/less/test.less";
-	
-			//$this->less->parseFile($less_file);
-			//$css = $this->less->getCSS();
-
-			//echo $css;
-			
-			$less_files = array($less_file => "/");
-			$css_file_name = Less_Cache::Get($less_files, $this->config['less_parser']);
-			$this->tpl->assign("css",$css_file_name);
-			
-			
-		}
-		catch(Exception $e){
-			core::debug($e->getMessage());
-		}*/
+		
 		
 		
 		

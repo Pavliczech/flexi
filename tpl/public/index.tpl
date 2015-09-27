@@ -11,7 +11,7 @@
 	
 	
 	{if isset($less)}
-		<link rel="stylesheet/less" href="/theme/public/less/{$less}" />
+		<link rel="stylesheet/less" href="{$less}" />
 		<script>
 			less = {
 				env: "development",

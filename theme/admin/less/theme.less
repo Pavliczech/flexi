@@ -38,6 +38,11 @@ HEADER
 		width: 250px;
 		height: 80px;
 		background: #34aaed;
+		transition: 500ms;
+		
+		&.closed {
+			width: 85px;
+		}
 
 		h1 {
 			position: absolute;
@@ -46,11 +51,19 @@ HEADER
 			font-size: 30px;
 			font-weight: 600;
 			color: white;
+			overflow: hidden;
+			white-space: nowrap;
+			width: 130px;
+			transition: 500ms;
 
 			small {
 				font-size: 11px;
 				color: #005c90;
 			}
+		}
+		
+		&.closed h1 {
+			width: 0;
 		}
 
 		.hotdog {
@@ -68,7 +81,8 @@ HEADER
 			color: rgba(255,255,255,0.8);
 			transition: 200ms;
 
-			&:hover {
+			&:hover,
+			&.active {
 				background: white;
 				border-color: white;
 				color: #34aaed;
@@ -170,6 +184,11 @@ CONTENT
 	position: relative;
 	min-height: 100%;
 	padding-left: 250px;
+	transition: 500ms padding;
+	
+	&.closed {
+		padding-left: 85px;
+	}
 
 	&:after {
 		.clear();
@@ -182,22 +201,201 @@ CONTENT
 		bottom: 0;
 		width: 250px;
 		background: #242425;
+		overflow: hidden;
+		transition: 500ms;
+		
+		&.closed {
+			width: 85px;
+		}
+
+		ul.menu {
+			list-style: none;
+			padding: 10px 0;
+			width: 250px;
+
+			li {
+				position: relative;
+				display: block;
+
+				a {
+					position: relative;
+					display: block;
+					padding: 15px 35px 15px 60px;
+					font-size: 13px;
+					color: white;
+					text-decoration: none;
+					transition: 500ms padding;
+
+					&:hover {
+						background: #1c1c1f;
+					}
+
+					&:before {
+						position: absolute;
+						top: 9px;
+						left: 17px;
+						width: 30px;
+						height: 30px;
+						line-height: 30px;
+						text-align: center;
+						content: "";
+						background: #1c1c1f;
+						font-family: FontAwesome;
+						color: rgba(255,255,255,0.3);
+						transition: 500ms;
+					}
+
+					&:hover:before {
+						color: rgba(255,255,255,0.8);
+					}
+
+					&.dashboard:before {
+						content: "\f1fe";
+					}
+
+					&.settings:before {
+						content: "\f013";
+					}
+
+					&.layout:before {
+						content: "\f12e";
+					}
+
+					&.users:before {
+						content: "\f007";
+					}
+
+					&.pages:before {
+						content: "\f15b";
+					}
+
+					&.forum:before {
+						content: "\f03a";
+					}
+				}
+
+				& > .arrow {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 40px;
+					height: 48px;
+					line-height: 48px;
+					cursor: pointer;
+					text-align: center;
+					color: rgba(255,255,255,0.5);
+
+					&:hover {
+						//background: #1c1c1f;
+						color: white;
+					}
+
+					&:before {
+						font-family: FontAwesome;
+						font-size: 11px;
+						content: "\f078";
+					}
+
+					&.active:before {
+						content: "\f077";
+					}
+				}
+
+				& > ul {
+					list-style: none;
+					background: #1c1c1f;
+					display: none;
+
+					li {
+						a {
+							font-size: 12px;
+							color: #c2c2c2;
+
+							&:hover {
+								color: white;
+							}
+
+							&:before {
+								background: #242425;
+								width: 27px;
+								height: 27px;
+								line-height: 27px;
+							}
+
+							&.database:before {
+								content: "\f1c0";
+							}
+
+							&.performance:before {
+								content: "\f1fe";
+							}
+
+							&.admins:before {
+								content: "\f0f0";
+							}
+
+							&.users:before {
+								content: "\f0c0";
+							}
+
+							&.banlist:before {
+								content: "\f256";
+							}
+
+							&.whitelist:before {
+								content: "\f087";
+							}
+
+							&.topics:before {
+								content: "\f27a";
+							}
+
+							&.reports:before {
+								content: "\f071";
+							}
+						}
+					}
+				}
+
+				&.opened > ul {
+					display: block;
+				}
+			}
+			
+			&.closed > li > a {
+				padding: 20px 0 20px 85px;
+				
+				&:before {
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					font-size: 15px;
+					left: 20px;
+					top: 10px;
+				}
+			}
+			
+			&.closed > li > ul {
+				display: none; /* OVERRIDE EVEN OPENED MENUS */
+			}
+			
+			
+		}
 	}
 
 	& > .content {
 		padding: 20px;
 		
 		& > header {
-			/*background: white;*/
 			margin: -20px -20px 0px -20px;
 			padding: 20px 20px 20px 20px;
 			
 			& > h1 {
 				padding: 0;
 				margin: 0;
-				font-size: 25px;
+				font-size: 30px;
 				font-weight: 500;
-				
+				color: #34aaed;
 			}
 		}
 	}

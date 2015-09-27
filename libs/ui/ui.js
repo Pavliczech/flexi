@@ -9,6 +9,19 @@ $(document).ready(function () {
 		$(this).closest(".ui_widget").toggleClass('closed');
 		$(this).toggleClass('active');
 	});
+	
+	$(".sidebar ul.menu .arrow").click(function () {
+		$(this).closest("li").toggleClass('opened');
+		$(this).toggleClass('active');
+	});
+	
+	$(".site_header .logo .hotdog").click(function () {
+		$(this).closest(".logo").toggleClass('closed');
+		$(".site_content").toggleClass('closed');
+		$(".site_content .sidebar").toggleClass('closed');
+		$(".site_content .sidebar ul.menu").toggleClass('closed');
+		$(this).toggleClass('active');
+	});
 
 
 });
