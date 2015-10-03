@@ -1,0 +1,192 @@
+/*
+
+ROUTER FOR BASIC LESS/CSS FILES + LOGIN STYLES
+
+*/
+
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('/theme/admin/fonts/fontawesome/fontawesome-webfont.eot?v=4.4.0');
+	src: url('/theme/admin/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),
+	url('/theme/admin/fonts/fontawesome/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),
+	url('/theme/admin/fonts/fontawesome/fontawesome-webfont.woff?v=4.4.0') format('woff'),
+	url('/theme/admin/fonts/fontawesome/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),
+	url('/theme/admin/fonts/fontawesome/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+@import "reset.less";
+
+@import "grid.less";
+
+@import "mixins.less";
+
+
+
+/*
+
+LOGIN PAGE STYLES BELOW
+
+*/
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #2c2c2c;
+}
+
+.login_header {
+	position: relative;
+	height: 30%;
+	background: #f1f1f1;
+	transition: 500ms height;
+	min-height: 100px;
+
+	@media (max-width:767px), (max-height:600px){
+		height: 20%;
+	}
+
+	h1 {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		display: block;
+		width: 200px;
+		margin-left: -100px;
+		text-align: center;
+		font-size: 60px;
+		color:#34aaed;
+		transition: 500ms;
+
+		@media (max-width:767px), (max-height:600px){
+			top: 25%;
+			font-size: 40px;
+		}
+
+		small {
+			font-size: 14px;
+			color: #2c2c2c;
+		}
+	}
+}
+
+.login_form {
+	padding: 50px 0;
+
+	@media (max-width:767px){
+		padding: 30px 0;
+	}
+
+	form {
+		display: block;
+		max-width: 400px;
+		padding: 0 15px;
+		margin: 0 auto;
+		overflow: hidden;
+
+		input {
+			width: 100%;
+			padding: 10px 13px;
+			margin: 5px 0;
+			border: 1px solid #ededed;
+			border-radius: 4px;
+		}
+
+		button {
+			margin: 5px 0;
+			float: right;
+			width: 100px;
+			height: 35px;
+			background: #34aaed;
+			border: 0;
+			font-family: inherit;
+			font-size: 14px;
+			font-weight: bold;
+			color: white;
+			cursor: pointer;
+			transition: 500ms width;
+
+			@media (max-width:450px){
+				width: 100%;
+			}
+
+			&:hover {
+				background: #242424;
+			}
+
+			&:before {
+				padding-right: 10px;
+				font-family: FontAwesome;
+				font-weight: normal;
+				content: "\f090";
+			}
+		}
+	}
+}
+
+
+
+
+/*
+
+	UI MESSAGE
+
+*/
+.ui_message {
+	position: relative;
+	margin: 10px 0;
+	padding: 15px 15px 15px 20px;
+	color: white;
+
+	&.closed {
+		display: none;
+	}
+
+	&.info {
+		background: #34aaed;
+	}
+
+	&.warning {
+		background: #FFB148;
+	}
+
+	&.error {
+		background: #FF4848;
+	}
+
+	&.confirm {
+		background: #75DF00;
+	}
+
+	& > .title {
+		font-size: 16px;
+		font-weight: 500;
+		padding: 0 0 5px 0;
+	}
+
+	& > a.close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&:before {
+			font-family: FontAwesome;
+			font-size: 16px;
+			line-height: 16px;
+			content: "\f00d";
+		}
+	}
+}

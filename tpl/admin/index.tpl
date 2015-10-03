@@ -55,7 +55,7 @@
 				<a class="settings">
 					<span>Settings</span>
 				</a>
-				<a class="logout">
+				<a href="/admin/admin_logout=1" class="logout">
 					<span>Logout</span>
 				</a>
 			</div>
@@ -129,6 +129,15 @@
 				</ul>
 				<h1>Dashboard</h1>
 			</header>
+			
+			{if core::get("login_complete")}
+				<div class="ui_message confirm">
+					<a class="close"></a>
+					<div class="title">Login complete</div>
+					<p>You have been logged in</p>
+				</div>
+			{/if}
+			
 			
 			<div class="row">
 				<div class="col-md-4">

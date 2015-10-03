@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/61, created on 2015-09-27 21:56:14
+<?php /* Smarty version 3.1.28-dev/61, created on 2015-10-04 01:15:25
          compiled from "C:\Webserver\htdocs\flexi\tpl\admin\index.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/61',
-  'unifunc' => 'content_560849de3d6b42_72256091',
+  'unifunc' => 'content_5610618d23e621_93616961',
   'file_dependency' => 
   array (
     'af700cc1955e13669c5edf28ef17d164a89c31bb' => 
     array (
       0 => 'C:\\Webserver\\htdocs\\flexi\\tpl\\admin\\index.tpl',
-      1 => 1443383602,
+      1 => 1443914122,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_560849de3d6b42_72256091')) {
-function content_560849de3d6b42_72256091 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5610618d23e621_93616961')) {
+function content_5610618d23e621_93616961 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -88,7 +88,7 @@ function content_560849de3d6b42_72256091 ($_smarty_tpl) {
 				<a class="settings">
 					<span>Settings</span>
 				</a>
-				<a class="logout">
+				<a href="/admin/admin_logout=1" class="logout">
 					<span>Logout</span>
 				</a>
 			</div>
@@ -162,6 +162,15 @@ function content_560849de3d6b42_72256091 ($_smarty_tpl) {
 				</ul>
 				<h1>Dashboard</h1>
 			</header>
+			
+			<?php if (core::get("login_complete")) {?>
+				<div class="ui_message confirm">
+					<a class="close"></a>
+					<div class="title">Login complete</div>
+					<p>You have been logged in</p>
+				</div>
+			<?php }?>
+			
 			
 			<div class="row">
 				<div class="col-md-4">

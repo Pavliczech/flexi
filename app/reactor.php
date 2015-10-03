@@ -129,6 +129,8 @@ $module = new module($config,$tpl,$core,$less);
 $module->init();
 
 class module {
+	
+
 
 	public function __construct($config,$tpl,$core,$less){
 
@@ -149,9 +151,17 @@ class module {
 	public function init(){
 		
 		
+		$this->adminlogged = $this->fastload("login/login",1,"login")->checklogin();
+
+		
 		/* ADD THESE IN CONFIG FILE */
 		if($this->core->get("admin")){
-			$less_files = "/theme/admin/less/router.less";
+			if($this->adminlogged){
+				$less_files = "/theme/admin/less/router.less";
+			}
+			else {
+				$less_files = "/theme/admin/less/login.less";
+			}
 		}
 		else {
 			$less_files = "/theme/public/less/router.less";
@@ -176,7 +186,19 @@ class module {
 		
 		if($this->core->get("admin")){
 			
-			echo $this->tpl->display("admin/index.tpl");
+			
+			if($this->adminlogged){
+				if($this->core->post("admin_logout") || $this->core->get("admin_logout")){
+					$this->adminlogged = $this->fastload("login/login",1,"login")->admin_logout();
+				}
+				echo $this->tpl->display("admin/index.tpl");
+			}
+			else {
+				if($this->core->post("admin_login")){
+					$this->adminlogged = $this->fastload("login/login",1,"login")->admin_login();
+				}
+				echo $this->tpl->display("admin/index-login.tpl");
+			}
 		}
 		else {
 			
@@ -201,6 +223,83 @@ class module {
 		
 		*/
 	}
+	
+	
+	public function check($module,$admin){
+		if($admin)
+			$folder = $this->config['modules_admin_folder'];
+		else
+			$folder = $this->config['modules_public_folder'];
+			
+		$file = $_SERVER["DOCUMENT_ROOT"] . "/" .$folder . $module .".php";
+		if(file_exists($file)){
+			return true;
+			$this->core->d_mess("Soubory modulu nalezeny - ". $file);
+		}
+		else {
+			return false;
+			$this->core->d_mess("Soubory modulu nenalezeny - ". $file);
+		}
+	}
+
+	public function load($module,$admin){
+		/** ADMIN OR PUBLIC FOLDER **/
+		if($admin)
+			$folder = $this->config['modules_admin_folder'];
+		else
+			$folder = $this->config['modules_public_folder'];
+		$file = $folder.$module.".php";
+
+		//$this->core->d_mess("<strong>LOAD</strong> - Kontroluji soubory modulu - ". $file);
+		
+		if($this->check($module,$admin)){ // CHECK IF EXISTS
+			//$this->core->d_mess("<strong>LOAD</strong> - Soubor modulu nalezen, VKLÁDÁM - ". $file);
+			include($file);
+		}
+		else {
+			//$this->core->d_mess("<strong>LOAD</strong> - Soubor modulu nenalezen");
+			return false;
+		}
+	}
+
+	public function fastload($module,$admin,$class){
+
+		$class_name = $class;
+		/** ADMIN OR PUBLIC FOLER **/
+		if($admin)
+			$folder = $this->config['modules_admin_folder'];
+		else
+			$folder = $this->config['modules_public_folder'];
+		$file = $folder.$module.".php";
+
+		//$this->core->d_mess("<strong>FASTLOAT - </strong> Kontroluji soubory modulu - ". $file);
+
+		if(file_exists($file)){
+			//$this->core->d_mess("<strong>FASTLOAD</strong> - Soubor modulu $class ($file) NALEZEN");
+			
+			if(!isset($fastmodules[$class][$file])){
+				$fastmodules[$class][$file] = true;
+				include_once($file);
+			}
+
+			if(isset($this->modules->defined[$class])){
+				//$this->core->d_mess("<strong>FASTLOAD</strong> - POUŽITA DEFINOVANÁ TŘÍDA - " . $class);
+			}
+			else {
+				$box_data["class"][$class] = true;
+				$this->modules->defined[$class] = new $class($this->config,$this->tpl,$this->core,$this->less);
+			}
+			
+			$class = $this->modules->defined[$class];
+			return $class;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	
+	
 
 	public function __destruct(){
 		
