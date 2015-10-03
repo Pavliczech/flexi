@@ -82,14 +82,14 @@ $config['less_parser'] = array(
 /*
 
 MOVE TO MODULE SETTINGS
-
+*/
 $config['database_type']		='mysql';
 $config['database_server']		='localhost';
-$config['database_name']		='database';
-$config['database_user']		='db_user';
-$config['database_password']	='password';
+$config['database_name']		='flexi';
+$config['database_user']		='flexi';
+$config['database_password']	='flexi_pw';
 
-*/
+
 
 // PHP MAILER CONFIGURATION
 /*

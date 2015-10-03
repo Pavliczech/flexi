@@ -23,20 +23,8 @@ $mail->CharSet	= $config['mailer_charset'];
 $mail->IsHTML($config['mailer_global_html']);*/
 
 
-/*
 
-move to modules too
 
-include("core/dibi/dibi.php");
-dibi::connect(array(
-	'driver'	=>$config['database_type'],
-	'host'		=>$config['database_server'],
-	'username'	=>$config['database_user'],
-	'password'	=>$config['database_password'],
-	'database'	=>$config['database_name'],
-));
-
-*/
 
 
 
@@ -54,6 +42,29 @@ if(file_exists($config_file)){
 else {
 	die($config_file . "not found!");
 }
+
+
+/*
+
+DIBI DB LAYER
+
+*/
+
+$dibi_file = $_SERVER["DOCUMENT_ROOT"] . "/app/core/dibi/dibi.php";
+if(file_exists($dibi_file)){
+	include_once($dibi_file);
+	dibi::connect(array(
+		'driver'	=>$config['database_type'],
+		'host'		=>$config['database_server'],
+		'username'	=>$config['database_user'],
+		'password'	=>$config['database_password'],
+		'database'	=>$config['database_name'],
+	));
+}
+else {
+	die($dibi_file . " not found!");
+}
+
 
 /*
 
