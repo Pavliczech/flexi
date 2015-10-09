@@ -251,6 +251,10 @@ UI WIDGET
 
 	& > .content {
 		padding: 20px;
+		
+		&.nospacing {
+			padding:0;
+		}
 	}
 
 	&.closed > .content {
@@ -913,6 +917,12 @@ UI BUTTONS
 	overflow: hidden;
 	background: @btn_color_default;
 	color: white;
+	
+	&.small {
+		padding: 0 10px;
+		line-height: 25px;
+		font-size: 12px;
+	}
 
 	&:hover,
 	&:before {
@@ -921,6 +931,10 @@ UI BUTTONS
 
 	&.ico {
 		padding-left: 45px;
+	}
+
+	&.ico.small {
+		padding-left: 40px;
 	}
 
 	&.blue {
@@ -979,6 +993,11 @@ UI BUTTONS
 		text-align: center;
 		font-family: FontAwesome;
 	}
+	
+	&.small:before {
+		line-height: 25px;
+		font-size: 10px;
+	}
 
 	&.confirm:before {
 		content: "\f00c";
@@ -995,4 +1014,102 @@ UI BUTTONS
 	&.view:before {
 		content: "\f06e";
 	}
+}
+
+/*
+
+UI TABLE (RESPONSIVE)
+
+*/
+
+table.ui_table {
+	margin: 15px 0;
+	border-collapse: collapse;
+	width: 100%;
+	background: white;
+	padding: 5px;
+	overflow: hidden;
+	border-radius: 5px;
+	
+	thead {
+		@media (max-width:991px){
+			display: none;
+		}
+		
+		tr {
+			th {
+				text-align: left;
+				font-size: 14px;
+				padding: 10px;
+				border-bottom: 1px solid #F3F3F3;
+				
+				&.options {
+					text-align: right;
+				}
+			}
+		}
+	}
+	
+	tbody {
+		tr {
+			border-bottom: 1px solid #F3F3F3;
+			
+			@media (max-width:991px){
+				border-bottom-width: 0;
+			}
+			
+			td {
+				padding: 10px;
+				text-align: left;
+				
+				
+				
+				/* MOBILE VERSION */
+				@media (max-width:991px){
+					background: #fcfcfc;
+					border: 1px solid #ebebeb;
+					display: block;
+					padding: 15px;
+					margin-bottom: -1px;
+					
+					&:last-child {
+						margin-bottom: 10px;
+					}
+					
+					
+					/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
+					&:before {
+						content:attr(data-title) " ";
+						font-weight: bold;
+					}
+				}
+				
+				/* TABLET+ */
+				@media (min-width:992px){
+					&.options {
+						padding: 6px 10px 5px 10px;
+						text-align: right;
+						white-space: nowrap;
+					}
+				}
+			}
+			
+	
+			
+			@media (min-width:992px){
+				&:nth-child(even) td{
+					background: #f8fbfd;
+				}	
+				
+				&:hover > td {
+					background: #f2f6fa;
+				}
+			}
+		}
+	}
+}
+
+.ui_box > .content > .ui_table {
+	margin: 0;
+	padding: 0;
 }

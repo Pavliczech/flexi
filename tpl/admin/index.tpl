@@ -478,6 +478,131 @@
 			</div>
 			
 			
+			<table class="ui_table">
+				<thead>
+					<tr>
+						<th class="id">#</th>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Date</th>
+						<th class="options">Options</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-title="ID:">1</td>
+						<td data-title="Name:">Free Responsive Admin Center</td>
+						<td data-title="Type:">Admin template</td>
+						<td data-title="Date:">25.2.2015</td>
+						<td class="options">
+							<button class="ui_button small orange ico edit">Edit</button>
+							<button class="ui_button small red ico delete">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td data-title="ID:">1</td>
+						<td data-title="Name:">Free Responsive Admin Center</td>
+						<td data-title="Type:">Admin template</td>
+						<td data-title="Date:">25.2.2015</td>
+						<td class="options">
+							<button class="ui_button small orange ico edit">Edit</button>
+							<button class="ui_button small red ico delete">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td data-title="ID:">1</td>
+						<td data-title="Name:">Free Responsive Admin Center</td>
+						<td data-title="Type:">Admin template</td>
+						<td data-title="Date:">25.2.2015</td>
+						<td class="options">
+							<button class="ui_button small orange ico edit">Edit</button>
+							<button class="ui_button small red ico delete">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td data-title="ID:">1</td>
+						<td data-title="Name:">Free Responsive Admin Center</td>
+						<td data-title="Type:">Admin template</td>
+						<td data-title="Date:">25.2.2015</td>
+						<td class=" options">
+							<button class="ui_button small orange ico edit">Edit</button>
+							<button class="ui_button small red ico delete">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<div class="ui_box">
+				<div class="header">
+					<div class="title">
+						Table inside box
+					</div>
+					<div class="actions">
+						<a class="close"></a>
+					</div>
+				</div>
+				<div class="content nospacing">
+					<table class="ui_table">
+						<thead>
+							<tr>
+								<th class="id">#</th>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Date</th>
+								<th class="options">Options</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-title="ID:">1</td>
+								<td data-title="Name:">Free Responsive Admin Center</td>
+								<td data-title="Type:">Admin template</td>
+								<td data-title="Date:">25.2.2015</td>
+								<td class="options">
+									<button class="ui_button small orange ico edit">Edit</button>
+									<button class="ui_button small red ico delete">Delete</button>
+								</td>
+							</tr>
+							<tr>
+								<td data-title="ID:">1</td>
+								<td data-title="Name:">Free Responsive Admin Center</td>
+								<td data-title="Type:">Admin template</td>
+								<td data-title="Date:">25.2.2015</td>
+								<td class="options">
+									<button class="ui_button small orange ico edit">Edit</button>
+									<button class="ui_button small red ico delete">Delete</button>
+								</td>
+							</tr>
+							<tr>
+								<td data-title="ID:">1</td>
+								<td data-title="Name:">Free Responsive Admin Center</td>
+								<td data-title="Type:">Admin template</td>
+								<td data-title="Date:">25.2.2015</td>
+								<td class="options">
+									<button class="ui_button small orange ico edit">Edit</button>
+									<button class="ui_button small red ico delete">Delete</button>
+								</td>
+							</tr>
+							<tr>
+								<td data-title="ID:">1</td>
+								<td data-title="Name:">Free Responsive Admin Center</td>
+								<td data-title="Type:">Admin template</td>
+								<td data-title="Date:">25.2.2015</td>
+								<td class=" options">
+									<button class="ui_button small orange ico edit">Edit</button>
+									<button class="ui_button small red ico delete">Delete</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					
+				</div>
+			</div>
+			
+			
+			
 			
 		</div>
 	</section>

@@ -34,8 +34,7 @@ $(document).ready(function () {
 	$( ".ui_message .close" ).click(function() {
 		$(this).parent(".ui_message").addClass('closed');
 	});
-
-
+	
 });
 
 
