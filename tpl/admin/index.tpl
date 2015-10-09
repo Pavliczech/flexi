@@ -277,7 +277,7 @@
 							<div class="move"></div>
 							<a href="#" class="image">
 								<div>
-									<img src="http://placehold.it/200x100" />
+									<img src="#" />
 								</div>
 							</a>
 							<div class="name">Lorem_ipsum_dol or_Lorem_ipsum_dolor_Lorem_ipsum_dolor.jpg</div>
@@ -293,7 +293,7 @@
 							<div class="move"></div>
 							<a href="#" class="image">
 								<div>
-									<img src="http://placehold.it/200x200" />
+									<img src="#" />
 								</div>
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
@@ -309,7 +309,7 @@
 							<div class="move"></div>
 							<a href="#" class="image">
 								<div>
-									<img src="http://placehold.it/200x200" />
+									<img src="#" />
 								</div>
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
@@ -325,7 +325,7 @@
 							<div class="move"></div>
 							<a href="#" class="image">
 								<div>
-									<img src="http://placehold.it/200x200" />
+									<img src="#" />
 								</div>
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
@@ -337,11 +337,11 @@
 					</div>
 					
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-						<div class="item flag_orange">
+						<div class="item flag_orange border">
 							<div class="move"></div>
 							<a href="#" class="image">
 								<div>
-									<img src="http://placehold.it/200x200" />
+									<img src="#" />
 								</div>
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
@@ -365,6 +365,10 @@
 					<li><a href="#">adipiscing elit</a></li>
 					<li class="sub"><a href="#">Submenu</a></li>
 				</ul>
+				
+				<ul class="right">
+					<li><a href="#" class="search">Right Link!</a></li>
+				</ul>
 			</nav>
 			
 			<nav class="ui_horizontal_menu">
@@ -374,12 +378,100 @@
 					<li><a href="#" class="search">consectetur</a></li>
 					<li><a href="#">adipiscing elit</a></li>
 				</ul>
+				<ul class="right">
+					<li><a href="#" class="edit">Yup link</a></li>
+					<li><a href="#">On right side</a></li>
+				</ul>
 			</nav>
 			
 			<div class="ui_horizontal_menu_content">
-				<div class="row">
+				<div class="row ui_form">
 					<div class="col-md-12">
-						data
+						<div class="item">
+							<label class="label required col-lg-4 col-md-4 col-sm-6 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<input type="text" placeholder="ololololo" />
+							</div>
+						</div>
+						<div class="item">
+							<label class="label required col-lg-4 col-md-4 col-sm-6 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								<input type="text" />
+							</div>
+						</div>
+						<div class="item">
+							<label class="label col-lg-4 col-md-4 col-sm-4 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-2 col-md-2 col-sm-4 col-xs-12">
+								<input type="text" />
+							</div>
+							<div class="info col-lg-2 col-md-2 col-sm-4 col-xs-12">
+								EUR
+							</div>
+						</div>
+						
+						<div class="item">
+							<label class="label col-lg-4 col-md-4 col-sm-4 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-2 col-md-2 col-sm-4 col-xs-12">
+								<input type="text" value="disabled bro" disabled="disabled" />
+							</div>
+							<div class="info col-lg-2 col-md-2 col-sm-4 col-xs-12">
+								Some input info
+							</div>
+						</div>
+						<div class="item">
+							<label class="label col-lg-4 col-md-4 col-sm-6 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-2 col-md-2 col-sm-6 col-xs-12">
+								<input type="text" value="read only" readonly="readonly" />
+							</div>
+						</div>
+						
+						<div class="item">
+							<label class="label col-lg-4 col-md-4 col-sm-12 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-2 col-md-2 col-sm-12 col-xs-12">
+								<select>
+									<option>Lorem ipsum dolor option in select</option>
+									<option>option in select</option>
+									<option>olololo</option>
+								</select>
+							</div>
+						</div>
+						
+						<hr />
+						
+						<div class="item">
+							<label class="label col-lg-4 col-md-4 col-sm-4 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-8 col-md-8 col-sm-8 col-xs-12">
+								<textarea placeholder="olololo"></textarea>
+							</div>
+						</div>
+						
+						<div class="item">
+							<label class="label col-lg-12 col-md-12 col-sm-12 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<textarea placeholder="textarea full width"></textarea>
+							</div>
+						</div>
+						
+						<div class="item">
+							<label class="label col-lg-12 col-md-12 col-sm-12 col-xs-12">Lorem ipsum</label>
+							<div class="input col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<textarea placeholder="textarea full width disabled" disabled="disabled"></textarea>
+							</div>
+						</div>
+						
+						<hr />
+						<button class="ui_button">Button!</button>
+						<button class="ui_button blue">Action</button>
+						<button class="ui_button green">Confirm</button>
+						<button class="ui_button orange">Something</button>
+						<button class="ui_button red">Denied</button>
+						<button class="ui_button dark">Dark</button>
+						<hr />
+						<button class="ui_button green ico confirm">Confirm</button>
+						<button class="ui_button orange ico edit">Something</button>
+						<button class="ui_button red ico delete">Denied</button>
+						<button class="ui_button dark ico view">Dark</button>
+						
 					</div>
 				</div>
 				
