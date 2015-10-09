@@ -270,6 +270,122 @@
 			</div>
 			
 			
+			<div class="ui_gallery">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="item">
+							<div class="move"></div>
+							<a href="#" class="image">
+								<div>
+									<img src="http://placehold.it/200x100" />
+								</div>
+							</a>
+							<div class="name">Lorem_ipsum_dol or_Lorem_ipsum_dolor_Lorem_ipsum_dolor.jpg</div>
+							<div class="options">
+								<a href="#" class="edit"></a>
+								<a href="#" class="remove"></a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="item flag_green">
+							<div class="move"></div>
+							<a href="#" class="image">
+								<div>
+									<img src="http://placehold.it/200x200" />
+								</div>
+							</a>
+							<div class="name">Lorem_ipsum_dolor.jpg</div>
+							<div class="options">
+								<a href="#" class="edit"></a>
+								<a href="#" class="remove"></a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="item flag_red">
+							<div class="move"></div>
+							<a href="#" class="image">
+								<div>
+									<img src="http://placehold.it/200x200" />
+								</div>
+							</a>
+							<div class="name">Lorem_ipsum_dolor.jpg</div>
+							<div class="options">
+								<a href="#" class="edit"></a>
+								<a href="#" class="remove"></a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="item flag_blue">
+							<div class="move"></div>
+							<a href="#" class="image">
+								<div>
+									<img src="http://placehold.it/200x200" />
+								</div>
+							</a>
+							<div class="name">Lorem_ipsum_dolor.jpg</div>
+							<div class="options">
+								<a href="#" class="edit"></a>
+								<a href="#" class="remove"></a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="item flag_orange">
+							<div class="move"></div>
+							<a href="#" class="image">
+								<div>
+									<img src="http://placehold.it/200x200" />
+								</div>
+							</a>
+							<div class="name">Lorem_ipsum_dolor.jpg</div>
+							<div class="options">
+								<a href="#" class="edit"></a>
+								<a href="#" class="remove"></a>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+			
+			
+			<nav class="ui_horizontal_menu">
+				<ul>
+					<li class="active"><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Dolor sit</a></li>
+					<li class="tab active"><a href="#">consectetur</a></li>
+					<li><a href="#">adipiscing elit</a></li>
+					<li class="sub"><a href="#">Submenu</a></li>
+				</ul>
+			</nav>
+			
+			<nav class="ui_horizontal_menu">
+				<ul>
+					<li><a href="#" class="add">Lorem ipsum</a></li>
+					<li class="active"><a href="#" class="edit">Dolor sit</a></li>
+					<li><a href="#" class="search">consectetur</a></li>
+					<li><a href="#">adipiscing elit</a></li>
+				</ul>
+			</nav>
+			
+			<div class="ui_horizontal_menu_content">
+				<div class="row">
+					<div class="col-md-12">
+						data
+					</div>
+				</div>
+				
+			</div>
+			
+			
 			
 		</div>
 	</section>

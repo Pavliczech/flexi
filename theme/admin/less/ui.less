@@ -303,11 +303,11 @@ UI WIDGET
 
 	&.warning:before {
 		content: "\f12a";
-		color: #FFB148;
+		color: #bd840a;
 	}
 
 	&.warning:after {
-		background: #FFB148;
+		background: #bd840a;
 	}
 
 	&.error:before {
@@ -321,11 +321,11 @@ UI WIDGET
 
 	&.confirm:before {
 		content: "\f00c";
-		color: #75DF00;
+		color: #45bd0a;
 	}
 
 	&.confirm:after {
-		background: #75DF00;
+		background: #45bd0a;
 	}
 
 	@media (max-width:900px){
@@ -354,7 +354,7 @@ UI WIDGET
 	}
 
 	&.warning > .title {
-		color: #FFB148;
+		color: #bd840a;
 	}
 
 	&.error > .title {
@@ -362,7 +362,7 @@ UI WIDGET
 	}
 
 	&.confirm > .title {
-		color: #75DF00;
+		color: #45bd0a;
 	}
 
 	& > p {
@@ -380,26 +380,41 @@ UI WIDGET
 	position: relative;
 	margin: 10px 0;
 	padding: 15px 15px 15px 20px;
-	color: white;
+	background: white;
+	overflow: hidden;
+	border-radius: 5px;
 
 	&.closed {
 		display: none;
 	}
+	
+	&:before {
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		width: 40px;
+		height: 40px;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		content: "";
+	}
 
-	&.info {
+	&.info:before {
 		background: #34aaed;
 	}
 
-	&.warning {
-		background: #FFB148;
+	&.warning:before {
+		background: #bd840a;
 	}
 
-	&.error {
+	&.error:before {
 		background: #FF4848;
 	}
 
-	&.confirm {
-		background: #75DF00;
+	&.confirm:before {
+		background: #45bd0a;
 	}
 
 	& > .title {
@@ -407,15 +422,32 @@ UI WIDGET
 		font-weight: 500;
 		padding: 0 0 5px 0;
 	}
+	
+	&.info > .title {
+		color: #34aaed;
+	}
+
+	&.warning > .title {
+		color: #bd840a;
+	}
+
+	&.error > .title {
+		color: #FF4848;
+	}
+
+	&.confirm > .title {
+		color: #45bd0a;
+	}
 
 	& > a.close {
 		position: absolute;
 		top: 15px;
 		right: 15px;
 		cursor: pointer;
+		color: #949494;
 
 		&:hover {
-			opacity: 0.8;
+			color: #535353;
 		}
 
 		&:before {
@@ -428,5 +460,280 @@ UI WIDGET
 }
 
 
+/*
+
+UI GALLERY
+
+*/
+.ui_gallery {
+	margin: 15px 0 0 0;
+	&:after {
+		.clear();
+	}
+	
+	.item {
+		background: white;
+		border-radius: 5px;
+		padding: 5px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 15px;
+		
+		&:before {
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			width: 40px;
+			height: 40px;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			content: "";
+		}
+		
+		&.flag_red:before {
+			background: #FF4848;
+		}
+		
+		&.flag_green:before {
+			background: #45bd0a;
+		}
+		
+		&.flag_blue:before {
+			background: #34aaed;
+		}
+
+		
+		.move {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			cursor: move;
+			border-right: 1px solid rgba(0,0,0,0.1);
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			border-radius: 0 0 5px 0;
+			background: rgba(255,255,255,0.8);
+			color: #585858;
+			
+			&:hover {
+				background: #f7f7f7;
+				color: #313131;
+			}
+			
+			&:before {
+				font-family: FontAwesome;
+				font-size: 17px;
+				content: "\f047";
+			}
+		}
+		
+		&:hover .move {
+			display: block;
+		}
+		
+		a.image {
+			display: block;
+			width: 100%;
+			height: 150px;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-flex-wrap: nowrap;
+			-ms-flex-wrap: nowrap;
+			flex-wrap: nowrap;
+			-webkit-justify-content: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-align-content: stretch;
+			-ms-flex-line-pack: stretch;
+			align-content: stretch;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			
+			div {
+				width: 100%;
+				
+				img {
+					display: block;
+					max-width: 100%;
+					max-height: 150px;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+		
+		.name {
+			height: 38px;
+			padding: 10px;
+			margin-right: 80px;
+			overflow: hidden;
+			font-size: 13px;
+			white-space: nowrap;
+			
+			@media (max-width:1400px){
+				text-align: center;
+				margin-right: 0;
+				padding-bottom: 5px;
+				height: auto;
+			}
+		}
+		
+		.options {
+			
+			@media (min-width:1401px){
+				position: absolute;
+				bottom: 9px;
+				right: 9px;
+				float: right;
+			}
+			
+			@media (max-width:1400px){
+				text-align: center;
+			}
+			
+			a {
+				display: block;
+				float: left;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				text-decoration: none;
+				color: #7c7c7c;
+				
+				@media (max-width:1400px){
+					display: inline-block;
+					float: none;
+				}
+				
+				&:hover {
+					color:#353535;
+				}
+				
+				&:before {
+					font-family: FontAwesome;
+					font-size: 17px;
+				}
+				
+				&.edit:before {
+					content: "\f040";
+				}
+				&.remove:before {
+					content: "\f1f8";
+				}
+			}
+		}
+	}
+}
+
+
+/*
+
+UI HORIZONTAL MENU
+
+*/
+.ui_horizontal_menu {
+	margin: 15px 0;
+	overflow: hidden;
+	background: white;
+	border-bottom: 2px solid #e2e2e2;
+	
+	&:after {
+		.clear();
+	}
+	
+	& > ul {
+		list-style: none;
+		
+		& > li {
+			float: left;
+			position: relative;
+			
+			&:before {
+				position: absolute;
+				top: 10px;
+				left: 0;
+				bottom: 10px;
+				content:"";
+				border-left: 1px solid rgba(0,0,0,0.1); 
+			}
+			
+			&:first-child:before {
+				display: none;
+			}
+			
+			& > a {
+				position: relative;
+				display: block;
+				padding: 15px;
+				font-size: 13px;
+				color: #2c2c2c;
+				text-decoration: none;
+				
+				&:before {
+					font-family: FontAwesome;
+					font-weight: normal;
+					padding-right: 10px;
+					//color: #a9a9a9;
+				}
+				
+				&.add:before {
+					content: "\f067";
+				}
+				
+				&.edit:before {
+					content: "\f040";
+				}
+				
+				&.search:before {
+					content: "\f002";
+				}
+				
+				&:hover {
+					color: #34aaed;
+				}
+			}
+			
+			&.active > a {
+				font-weight: bold;
+				color: #34aaed;
+			}
+			
+			&.tab.active > a:after {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				content: "";
+				margin-left: -7.5px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 7.5px 7px 7.5px;
+				border-color: transparent transparent #e2e2e2 transparent;
+
+			}
+		}
+	}
+}
+
+/* CONTENT AREA UNDER HORIZONTAL MENU - IDEAL FOR FORMS */
+.ui_horizontal_menu_content {
+	margin: -15px 0 15px 0;
+	overflow: hidden;
+	background: white;
+	border-radius: 0 5px 5px 0;
+	padding: 15px;
+}
 
 
