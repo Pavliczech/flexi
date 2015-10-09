@@ -35,6 +35,19 @@ $(document).ready(function () {
 		$(this).parent(".ui_message").addClass('closed');
 	});
 	
+	
+	// ARTICLES TREE MENU
+	$(".ui_side_treemenu .open").click(function () {
+		$(this).closest("li").toggleClass('opened');
+		$(this).toggleClass('active');
+	});
+	$(".ui_side_treemenu .hotdog").click(function () {
+		$(this).siblings("nav").toggleClass('opened');
+		$(this).toggleClass('active');
+	});
+	
+	
+	
 });
 
 

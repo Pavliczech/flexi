@@ -217,6 +217,8 @@ HEADER
 						margin: 0;
 					}
 				}
+				
+				
 
 				&.notifications:before {
 					content: "\f071";
@@ -224,6 +226,13 @@ HEADER
 
 				&.settings:before {
 					content: "\f013";
+				}
+				
+				@media (max-width:500px){
+					&.notifications,
+					&.settings {
+						display: none;
+					}
 				}
 
 				&.logout:before {

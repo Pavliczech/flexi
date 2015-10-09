@@ -139,6 +139,97 @@
 			{/if}
 			
 			
+			<div class="ui_side_treemenu">
+				<a class="hotdog">Subarticles</a>
+				<nav>
+					<ul>
+						<li class="childs">
+							<div class="open"></div>
+							<a href="">Lorem ipsum</a>
+							<ul>
+								<li><a href="#">Lorem ipsum</a></li>
+								<li><a href="#">Lorem ipsum</a></li>
+								<li><a href="#">Lorem ipsum</a></li>
+								<li class="childs">
+									<div class="open"></div>
+									<a href="#">Lorem ipsum</a>
+									<ul>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li class="active"><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Lorem ipsum</a></li>
+									</ul>
+								</li>
+								<li class="childs">
+									<div class="open"></div>
+									<a href="#">Lorem ipsum</a>
+									<ul>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li class="active"><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Lorem ipsum</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Lorem ipsum</a></li>
+							</ul>
+						</li>
+						<li><a href="">Lorem ipsum</a></li>
+						<li><a href="">Lorem ipsum</a></li>
+						<li><a href="">Lorem ipsum</a></li>
+						<li><a href="">Lorem ipsum</a></li>
+						<li><a href="">Lorem ipsum</a></li>
+					</ul>
+					
+				</nav>
+				<div class="inside">
+					
+					
+					<div class="row ui_form">
+						<div class="col-md-12">
+							<div class="item">
+								<label class="label required col-lg-2 col-md-2 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-5 col-md-4 col-sm-6 col-xs-12">
+									<input type="text" placeholder="ololololo" />
+								</div>
+							</div>
+							<div class="item">
+								<label class="label required col-lg-2 col-md-2 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-5 col-md-3 col-sm-6 col-xs-12">
+									<input type="text" />
+								</div>
+							</div>
+							<div class="item">
+								<label class="label col-lg-2 col-md-2 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-2 col-md-2 col-sm-6 col-xs-12">
+									<input type="text" value="read only" readonly="readonly" />
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-2 col-md-2 col-sm-12 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-2 col-md-2 col-sm-12 col-xs-12">
+									<select>
+										<option>Lorem ipsum dolor option in select</option>
+										<option>option in select</option>
+										<option>olololo</option>
+									</select>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					
+					
+					
+					
+					
+				</div>
+				
+			</div>
+			
+			
 			<div class="row">
 				<div class="col-md-4">
 					<div class="ui_widget">
@@ -147,7 +238,7 @@
 							<div class="actions">
 								<a href="#" class="add"></a>
 								<a href="#" class="edit"></a>
-								<a href="#" class="toggle"></a>
+								<a class="toggle"></a>
 							</div>
 						</header>
 						<div class="content">
@@ -166,7 +257,7 @@
 							<div class="actions">
 								<a href="#" class="add"></a>
 								<a href="#" class="edit"></a>
-								<a href="#" class="toggle"></a>
+								<a class="toggle"></a>
 							</div>
 						</header>
 						<div class="content">
@@ -185,7 +276,7 @@
 							<div class="actions">
 								<a href="#" class="add"></a>
 								<a href="#" class="edit"></a>
-								<a href="#" class="toggle"></a>
+								<a class="toggle"></a>
 							</div>
 						</header>
 						<div class="content">
@@ -272,7 +363,7 @@
 			
 			<div class="ui_gallery">
 				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 						<div class="item">
 							<div class="move"></div>
 							<a href="#" class="image">
@@ -288,7 +379,7 @@
 						</div>
 					</div>
 					
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 						<div class="item flag_green">
 							<div class="move"></div>
 							<a href="#" class="image">
@@ -304,7 +395,7 @@
 						</div>
 					</div>
 					
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 						<div class="item flag_red">
 							<div class="move"></div>
 							<a href="#" class="image">
@@ -320,7 +411,7 @@
 						</div>
 					</div>
 					
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 						<div class="item flag_blue">
 							<div class="move"></div>
 							<a href="#" class="image">
@@ -336,7 +427,7 @@
 						</div>
 					</div>
 					
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 						<div class="item flag_orange border">
 							<div class="move"></div>
 							<a href="#" class="image">
