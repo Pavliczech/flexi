@@ -139,6 +139,22 @@
 			{/if}
 			
 			
+			<div class="ui_boxmenu">
+				<a href="#">
+					<div class="icon fa_b_info"></div>
+					<span>Some link</span>
+				</a>
+				<a href="#">
+					<div class="icon fa_b_warning"></div>
+					<span>Some link</span>
+				</a>
+				<a href="#">
+					<div class="icon fa_b_list"></div>
+					<span>Some link</span>
+				</a>
+			</div>
+			
+			
 			<div class="ui_side_treemenu">
 				<a class="hotdog">Subarticles</a>
 				<nav>

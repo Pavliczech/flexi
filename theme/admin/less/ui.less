@@ -1255,3 +1255,82 @@ UI SIDE TREE MENU
 		padding: 15px;
 	}
 }
+
+
+/*
+
+UI BOXMENU
+
+*/
+.ui_boxmenu {
+	&:after {
+		.clear();
+	}
+
+	& > a {
+		position: relative;
+		display: block;
+		float: left;
+		width: 120px;
+		padding: 15px;
+		margin: 0 5px 5px 0;
+		text-decoration: none;
+		text-align: center;
+		color: inherit;
+
+		@media (max-width:991px){
+			padding: 10px;
+			width: 90px;
+		}
+
+		@media (max-width:767px){
+			padding: 5px;
+			width: 80px;
+		}
+
+		&:hover {
+			background: white;
+			border-radius: 5px;
+		}
+
+		& > .icon {
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 40px;
+			margin-bottom: 10px;
+
+			@media (max-width:991px){
+				font-size: 25px;
+				line-height: 30px;
+				height: 30px;
+			}
+
+			@media (max-width:767px){
+				font-size: 17px;
+				line-height: 20px;
+				height: 20px;
+			}
+
+			&:before {
+				font-family: FontAwesome;
+			}
+		}
+
+		&:hover > .icon {
+			color: #34aaed;
+		}
+
+		& > span {
+			font-size: 13px;
+
+			@media (max-width:991px){
+				font-size: 12px;
+			}
+
+			@media (max-width:767px){
+				font-size: 11px;
+			}
+		}
+	}
+}
