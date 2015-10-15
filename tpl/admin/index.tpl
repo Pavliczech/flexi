@@ -49,13 +49,13 @@
 				</div>
 			</div>
 			<div class="actions">
-				<a class="notifications">
+				<a class="fa_b_warning">
 					<span>Notifications</span>
 				</a>
-				<a class="settings">
+				<a class="fa_b_cog">
 					<span>Settings</span>
 				</a>
-				<a href="/admin/admin_logout=1" class="logout">
+				<a href="/admin/admin_logout=1" class="fa_b_sign-out">
 					<span>Logout</span>
 				</a>
 			</div>
@@ -189,27 +189,27 @@
 					<div class="row ui_form">
 						<div class="col-md-12">
 							<div class="item">
-								<label class="label required col-lg-2 col-md-2 col-sm-6 col-xs-12">Lorem ipsum</label>
-								<div class="input col-lg-5 col-md-4 col-sm-6 col-xs-12">
+								<label class="label required col-lg-3 col-md-6 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-5 col-md-6 col-sm-6 col-xs-12">
 									<input type="text" placeholder="ololololo" />
 								</div>
 							</div>
 							<div class="item">
-								<label class="label required col-lg-2 col-md-2 col-sm-6 col-xs-12">Lorem ipsum</label>
-								<div class="input col-lg-5 col-md-3 col-sm-6 col-xs-12">
+								<label class="label required col-lg-3 col-md-6 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-5 col-md-6 col-sm-6 col-xs-12">
 									<input type="text" />
 								</div>
 							</div>
 							<div class="item">
-								<label class="label col-lg-2 col-md-2 col-sm-6 col-xs-12">Lorem ipsum</label>
-								<div class="input col-lg-2 col-md-2 col-sm-6 col-xs-12">
+								<label class="label col-lg-3 col-md-6 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-2 col-md-6 col-sm-6 col-xs-12">
 									<input type="text" value="read only" readonly="readonly" />
 								</div>
 							</div>
 							
 							<div class="item">
-								<label class="label col-lg-2 col-md-2 col-sm-12 col-xs-12">Lorem ipsum</label>
-								<div class="input col-lg-2 col-md-2 col-sm-12 col-xs-12">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-2 col-md-6 col-sm-12 col-xs-12">
 									<select>
 										<option>Lorem ipsum dolor option in select</option>
 										<option>option in select</option>
@@ -236,8 +236,8 @@
 						<header>
 							<h2 class="title">Widget box</h2>
 							<div class="actions">
-								<a href="#" class="add"></a>
-								<a href="#" class="edit"></a>
+								<a href="#" class="fa_b_plus"></a>
+								<a href="#" class="fa_b_pencil"></a>
 								<a class="toggle"></a>
 							</div>
 						</header>
@@ -255,8 +255,8 @@
 						<header>
 							<h2 class="title">Widget box</h2>
 							<div class="actions">
-								<a href="#" class="add"></a>
-								<a href="#" class="edit"></a>
+								<a href="#" class="fa_b_plus"></a>
+								<a href="#" class="fa_b_pencil"></a>
 								<a class="toggle"></a>
 							</div>
 						</header>
@@ -274,8 +274,9 @@
 						<header>
 							<h2 class="title">Widget box</h2>
 							<div class="actions">
-								<a href="#" class="add"></a>
-								<a href="#" class="edit"></a>
+								<a href="#" class="fa_b_plus"></a>
+								<a href="#" class="fa_b_pencil"></a>
+								<a href="#" class="fa_b_eye"></a>
 								<a class="toggle"></a>
 							</div>
 						</header>
@@ -329,30 +330,37 @@
 				<p>lorem ipsum dolor info box text</p>
 			</div>
 			
+			<div class="ui_text simple">
+				<div class="title">Simple text</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum egestas orci, quis sagittis justo pharetra maximus. 
+				Phasellus felis dui, fringilla sed semper at, tempus vel elit. Fusce tellus metus, suscipit quis ex quis, tincidunt consequat risus. 
+				Etiam in efficitur elit. Aenean malesuada sollicitudin neque vitae auctor. Nam ac tellus semper, pellentesque elit et, congue felis. 
+				Sed maximus erat odio, vel bibendum lectus ornare id. Sed imperdiet risus nisl, nec tristique enim laoreet vitae.</p>
+			</div>
 			
 			
-			<div class="ui_text info">
+			<div class="ui_text info fa_b_info">
 				<div class="title">Informations</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum egestas orci, quis sagittis justo pharetra maximus. 
 				Phasellus felis dui, fringilla sed semper at, tempus vel elit. Fusce tellus metus, suscipit quis ex quis, tincidunt consequat risus. 
 				Etiam in efficitur elit. Aenean malesuada sollicitudin neque vitae auctor. Nam ac tellus semper, pellentesque elit et, congue felis. 
 				Sed maximus erat odio, vel bibendum lectus ornare id. Sed imperdiet risus nisl, nec tristique enim laoreet vitae.</p>
 			</div>
-			<div class="ui_text warning">
+			<div class="ui_text warning fa_b_warning">
 				<div class="title">Warning</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum egestas orci, quis sagittis justo pharetra maximus. 
 				Phasellus felis dui, fringilla sed semper at, tempus vel elit. Fusce tellus metus, suscipit quis ex quis, tincidunt consequat risus. 
 				Etiam in efficitur elit. Aenean malesuada sollicitudin neque vitae auctor. Nam ac tellus semper, pellentesque elit et, congue felis. 
 				Sed maximus erat odio, vel bibendum lectus ornare id. Sed imperdiet risus nisl, nec tristique enim laoreet vitae.</p>
 			</div>
-			<div class="ui_text error">
+			<div class="ui_text error fa_b_times">
 				<div class="title">Error</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum egestas orci, quis sagittis justo pharetra maximus. 
 				Phasellus felis dui, fringilla sed semper at, tempus vel elit. Fusce tellus metus, suscipit quis ex quis, tincidunt consequat risus. 
 				Etiam in efficitur elit. Aenean malesuada sollicitudin neque vitae auctor. Nam ac tellus semper, pellentesque elit et, congue felis. 
 				Sed maximus erat odio, vel bibendum lectus ornare id. Sed imperdiet risus nisl, nec tristique enim laoreet vitae.</p>
 			</div>
-			<div class="ui_text confirm">
+			<div class="ui_text confirm fa_b_check">
 				<div class="title">Confirm</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum egestas orci, quis sagittis justo pharetra maximus. 
 				Phasellus felis dui, fringilla sed semper at, tempus vel elit. Fusce tellus metus, suscipit quis ex quis, tincidunt consequat risus. 
@@ -373,8 +381,9 @@
 							</a>
 							<div class="name">Lorem_ipsum_dol or_Lorem_ipsum_dolor_Lorem_ipsum_dolor.jpg</div>
 							<div class="options">
-								<a href="#" class="edit"></a>
-								<a href="#" class="remove"></a>
+								<a href="#" class="fa_b_pencil"></a>
+								<a href="#" class="fa_b_times"></a>
+								<a href="#" class="fa_b_eye"></a>
 							</div>
 						</div>
 					</div>
@@ -389,8 +398,8 @@
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
 							<div class="options">
-								<a href="#" class="edit"></a>
-								<a href="#" class="remove"></a>
+								<a href="#" class="fa_b_pencil"></a>
+								<a href="#" class="fa_b_times"></a>
 							</div>
 						</div>
 					</div>
@@ -405,8 +414,8 @@
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
 							<div class="options">
-								<a href="#" class="edit"></a>
-								<a href="#" class="remove"></a>
+								<a href="#" class="fa_b_pencil"></a>
+								<a href="#" class="fa_b_times"></a>
 							</div>
 						</div>
 					</div>
@@ -421,8 +430,8 @@
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
 							<div class="options">
-								<a href="#" class="edit"></a>
-								<a href="#" class="remove"></a>
+								<a href="#" class="fa_b_pencil"></a>
+								<a href="#" class="fa_b_times"></a>
 							</div>
 						</div>
 					</div>
@@ -437,8 +446,8 @@
 							</a>
 							<div class="name">Lorem_ipsum_dolor.jpg</div>
 							<div class="options">
-								<a href="#" class="edit"></a>
-								<a href="#" class="remove"></a>
+								<a href="#" class="fa_b_pencil"></a>
+								<a href="#" class="fa_b_times"></a>
 							</div>
 						</div>
 					</div>
@@ -464,13 +473,13 @@
 			
 			<nav class="ui_horizontal_menu">
 				<ul>
-					<li><a href="#" class="add">Lorem ipsum</a></li>
-					<li class="active"><a href="#" class="edit">Dolor sit</a></li>
-					<li><a href="#" class="search">consectetur</a></li>
-					<li><a href="#">adipiscing elit</a></li>
+					<li><a href="#" class="fa_b_plus">Lorem ipsum</a></li>
+					<li class="active"><a href="#" class="fa_b_pencil">Dolor sit</a></li>
+					<li><a href="#" class="fa_b_search">consectetur</a></li>
+					<li><a href="#" class="fa_a_warning">adipiscing elit</a></li>
 				</ul>
 				<ul class="right">
-					<li><a href="#" class="edit">Yup link</a></li>
+					<li><a href="#" class="fa_b_pencil">Yup link</a></li>
 					<li><a href="#">On right side</a></li>
 				</ul>
 			</nav>
@@ -558,10 +567,15 @@
 						<button class="ui_button red">Denied</button>
 						<button class="ui_button dark">Dark</button>
 						<hr />
-						<button class="ui_button green ico confirm">Confirm</button>
-						<button class="ui_button orange ico edit">Something</button>
-						<button class="ui_button red ico delete">Denied</button>
-						<button class="ui_button dark ico view">Dark</button>
+						<button class="ui_button green ico fa_b_check">Confirm</button>
+						<button class="ui_button orange ico fa_b_pencil">Something</button>
+						<button class="ui_button red ico fa_b_times">Denied</button>
+						<button class="ui_button dark ico fa_b_eye">Dark</button>
+						
+						<hr />
+						<button class="ui_button mobile_big green ico fa_b_check">.mobile_big</button>
+						<button class="ui_button mobile_big orange ico fa_b_pencil">Something</button>
+
 						
 					</div>
 				</div>
@@ -586,8 +600,8 @@
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class="options">
-							<button class="ui_button small orange ico edit">Edit</button>
-							<button class="ui_button small red ico delete">Delete</button>
+							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico fa_b_times">Delete</button>
 						</td>
 					</tr>
 					<tr>
@@ -596,8 +610,8 @@
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class="options">
-							<button class="ui_button small orange ico edit">Edit</button>
-							<button class="ui_button small red ico delete">Delete</button>
+							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico fa_b_times">Delete</button>
 						</td>
 					</tr>
 					<tr>
@@ -606,8 +620,8 @@
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class="options">
-							<button class="ui_button small orange ico edit">Edit</button>
-							<button class="ui_button small red ico delete">Delete</button>
+							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico fa_b_times">Delete</button>
 						</td>
 					</tr>
 					<tr>
@@ -616,8 +630,8 @@
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class=" options">
-							<button class="ui_button small orange ico edit">Edit</button>
-							<button class="ui_button small red ico delete">Delete</button>
+							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico fa_b_times">Delete</button>
 						</td>
 					</tr>
 				</tbody>
