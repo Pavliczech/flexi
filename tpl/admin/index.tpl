@@ -477,7 +477,7 @@
 				<ul>
 					<li class="active"><a href="#">Lorem ipsum</a></li>
 					<li><a href="#">Dolor sit</a></li>
-					<li class="tab active"><a href="#">consectetur</a></li>
+					<li class="tab active"><a href="#" class="fa_a_info">consectetur</a></li>
 					<li><a href="#">adipiscing elit</a></li>
 					<li class="sub"><a href="#">Submenu</a></li>
 				</ul>
