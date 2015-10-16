@@ -602,7 +602,6 @@ UI GALLERY
 	}
 }
 
-
 /*
 
 UI HORIZONTAL MENU
@@ -655,7 +654,7 @@ UI HORIZONTAL MENU
 					font-weight: normal;
 					padding-right: 10px;
 				}
-				
+
 				&:after {
 					font-family: FontAwesome;
 					font-weight: normal;
@@ -696,7 +695,6 @@ UI HORIZONTAL MENU
 	border-radius: 0 5px 5px 0;
 	padding: 15px;
 }
-
 
 /*
 
@@ -880,14 +878,14 @@ UI BUTTONS
 	overflow: hidden;
 	background: @btn_color_default;
 	color: white;
-	
+
 	@media (max-width:450px){
 		&.mobile_big {
 			display: block;
 			width: 100%;
 		}
 	}
-	
+
 	&.small {
 		padding: 0 10px;
 		line-height: 25px;
@@ -899,19 +897,28 @@ UI BUTTONS
 		background: darken(@btn_color_default,10%);
 	}
 
-	&.ico {
+	&.ico_b {
 		padding-left: 45px;
 	}
 
-	&.ico.small {
+	&.ico_b.small {
 		padding-left: 40px;
+	}
+
+	&.ico_a {
+		padding-right: 45px;
+	}
+
+	&.ico_a.small {
+		padding-right: 40px;
 	}
 
 	&.blue {
 		background: @btn_color_info;
 
-		&:hover,
-		&:before {
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
 			background: darken(@btn_color_info,10%);
 		}
 	}
@@ -919,8 +926,9 @@ UI BUTTONS
 	&.green {
 		background: @btn_color_confirm;
 
-		&:hover,
-		&:before {
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
 			background: darken(@btn_color_confirm,10%);
 		}
 	}
@@ -928,8 +936,9 @@ UI BUTTONS
 	&.orange {
 		background: @btn_color_edit;
 
-		&:hover,
-		&:before {
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
 			background: darken(@btn_color_edit,10%);
 		}
 	}
@@ -937,8 +946,9 @@ UI BUTTONS
 	&.red {
 		background: @btn_color_delete;
 
-		&:hover,
-		&:before {
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
 			background: darken(@btn_color_delete,10%);
 		}
 	}
@@ -946,10 +956,18 @@ UI BUTTONS
 	&.dark {
 		background: @btn_color_dark;
 
-		&:hover,
-		&:before {
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
 			background: darken(@btn_color_dark,10%);
 		}
+	}
+
+	&.inactive {
+		opacity: 0.5;
+		cursor: default;
+		outline: none;
+		pointer-events: none;
 	}
 
 	&:before {
@@ -963,13 +981,28 @@ UI BUTTONS
 		text-align: center;
 		font-family: FontAwesome;
 	}
-	
+
 	&.small:before {
 		line-height: 25px;
 		font-size: 10px;
 	}
 
-	
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 30px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		font-family: FontAwesome;
+	}
+
+	&.after:before {
+		line-height: 25px;
+		font-size: 10px;
+	}
 }
 
 /*
@@ -982,38 +1015,41 @@ table.ui_table {
 	margin: 15px 0;
 	border-collapse: collapse;
 	width: 100%;
-	background: white;
 	padding: 5px;
 	overflow: hidden;
-	border-radius: 5px;
-	
+
+	@media (min-width:992px){
+		background: white;
+		border-radius: 5px;
+	}
+
 	thead {
 		@media (max-width:991px){
 			display: none;
 		}
-		
+
 		tr {
 			th {
 				text-align: left;
 				font-size: 14px;
 				padding: 10px;
 				border-bottom: 1px solid #F3F3F3;
-				
+
 				&.options {
 					text-align: right;
 				}
 			}
 		}
 	}
-	
+
 	tbody {
 		tr {
 			border-bottom: 1px solid #F3F3F3;
-			
+
 			@media (max-width:991px){
 				border-bottom-width: 0;
 			}
-			
+
 			td {
 				padding: 10px;
 				text-align: left;
@@ -1025,9 +1061,9 @@ table.ui_table {
 					display: block;
 					padding: 15px;
 					margin-bottom: -1px;
-					
+
 					&:last-child {
-						margin-bottom: 10px;
+						border-bottom-width: 15px;
 					}
 
 					/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
@@ -1051,9 +1087,16 @@ table.ui_table {
 				&:nth-child(even) td{
 					background: #f8fbfd;
 				}	
-				
+
 				&:hover > td {
 					background: #f2f6fa;
+				}
+			}
+
+			@media (max-width:991px){
+				&:last-child td:last-child {
+					border-bottom: 1px solid #ebebeb;
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -1076,7 +1119,7 @@ UI SIDE TREE MENU
 	margin: 15px 0;
 	border-radius: 5px;
 	overflow: hidden;
-	
+
 	@media (max-width:767px){
 		& > a.hotdog {
 			position: relative;
@@ -1085,7 +1128,7 @@ UI SIDE TREE MENU
 			border-bottom: 1px solid #f2f2f2;
 			cursor: pointer;
 			font-size: 18px;
-			
+
 			&:before {
 				position: absolute;
 				top: 10px;
@@ -1104,7 +1147,7 @@ UI SIDE TREE MENU
 				font-size: 14px;
 				content: "\f0c9";
 			}
-			
+
 			&.active:before {
 				border-color: #34aaed;
 				background: #34aaed;
@@ -1112,23 +1155,23 @@ UI SIDE TREE MENU
 			}
 		}
 	}
-	
+
 	@media (min-width:768px){
 		& > a.hotdog {
 			display: none;
 		}
 	}
-	
+
 	& > nav {
 		position: relative;
 		float: left;
 		width: 200px;
 		overflow: hidden;
-		
+
 		@media (min-width:1500px){
 			width: 300px;
 		}
-		
+
 		@media (max-width:767px){
 			display: none;
 			float: none;
@@ -1140,8 +1183,7 @@ UI SIDE TREE MENU
 				display: block;
 			}
 		}
-		
-		
+
 		@media (min-width:768px){
 			&:before {
 				position: absolute;
@@ -1159,11 +1201,11 @@ UI SIDE TREE MENU
 			li {
 				position: relative;
 				padding-left: 20px;
-				
+
 				@media (max-width:767px){
 					padding-left: 30px;
 				}
-				
+
 				&:not(.childs):before {
 					position: absolute;
 					top: 12px;
@@ -1173,13 +1215,13 @@ UI SIDE TREE MENU
 					background: gray;
 					border-radius: 10px;
 					content: "";
-					
+
 					@media (max-width:767px){
 						top: 17px;
 						left: 12px;
 					}
 				}
-				
+
 				&.childs .open {
 					display: block;
 					position: absolute;
@@ -1190,66 +1232,65 @@ UI SIDE TREE MENU
 					line-height: 32px;
 					text-align: center;
 					cursor: pointer;
-					
+
 					@media (max-width:767px){
 						width: 30px;
 						height: 39px;
 						line-height: 39px;
 						font-size: 16px;
 					}
-					
+
 					&:before {
 						font-family: FontAwesome;
 						content: "\f0da";
 					}
-					
+
 					&.active:before {
 						content: "\f0d7";
 					}
-					
+
 					&:hover {
 						background: #f2f2f2;
 					}
 				}
-				
+
 				& > a {
 					display: block;
 					padding: 7px;
 					font-size: 13px;
 					color: inherit;
 					text-decoration: none;
-					
+
 					@media (max-width:767px){
 						font-size: 14px;
 						padding: 10px;
 					}
-					
+
 					&:hover {
 						background: #f2f2f2;
 					}
 				}
-				
+
 				&.opened > a {
 					color: #34aaed;
 				}
-				
+
 				&.active > a {
 					font-weight: bold;
 					color: #34aaed;
 				}
-				
+
 				ul {
 					display: none;
 				}
-				
+
 				&.opened > ul {
 					display: block;
 				}
-
 			}
 		}
 	}
-	
+
 	& > .inside {
 		overflow: hidden;
 		padding: 15px;
@@ -1334,3 +1375,150 @@ UI BOXMENU
 		}
 	}
 }
+
+
+/*
+
+UI DRAG'N'DROP
+
+*/
+.ui_dragndrop {
+	position: relative;
+	background: white;
+	margin: 15px 0;
+	border-radius: 5px;
+	height: 200px;
+
+	&.small {
+		height: 150px;
+	}
+
+	&.normal {
+		height: 250px;
+	}
+
+	&.big {
+		height: 350px;
+	}
+
+	& > .area {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+		left: 5px;
+		border: 2px dashed rgba(0,0,0,0.1);
+
+		&.active {
+			border-color: #45bd0a;
+		}
+
+		& .progress {
+			position: absolute;
+			top: 50%;
+			margin-top: 50px;
+			left: 50%;
+			width: 200px;
+			margin-left: -100px;
+			height: 7px;
+			background: rgba(0,0,0,0.1);
+			border-radius: 5px;
+			overflow: hidden;
+
+			@keyframes upload_blink {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0.7;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
+			div {
+				border-radius: 5px;
+				height: 7px;
+				background: #ee8e04;
+				animation: upload_blink 500ms infinite;
+			}
+		}
+
+		& .title {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			height: 90px;
+			margin-top: -45px;
+			font-size: 14px;
+			color: gray;
+
+			&:before {
+				display: block;
+				height: 70px;
+				font-family: FontAwesome;
+				font-size: 40px;
+				display: block;
+				width: 100%;
+				color: silver;
+				
+			}
+
+			&:after {
+				font-family: inherit;
+				content: attr(data-title);
+			}
+		}
+
+		&.active > .title:before {
+			color: #45bd0a;
+		}
+
+		@keyframes upload_bounce {
+			0% {
+				margin: 0 0 0 0;
+			}
+			50% {
+				margin: -5px 0 5px 0;
+			}
+			100% {
+				margin: 0 0 0 0;
+			}
+		}
+
+		&.uploading > .title:before {
+			color: #ee8e04;
+			content: "\f0ee";
+			animation: upload_bounce 500ms infinite;
+		}
+
+		&.uploading > .title:after {
+			content: attr(data-uploading);
+			color: #ee8e04;
+		}
+
+		&.error > .title:before {
+			color: #e60d0d;
+			content: "\f00d";
+		}
+
+		&.error > .title:after {
+			content: attr(data-error);
+			color: #e60d0d;
+		}
+
+		&.confirm > .title:before {
+			color: #45bd0a;
+			content: "\f058";
+		}
+
+		&.confirm > .title:after {
+			content: attr(data-confirm);
+			color: #45bd0a;
+		}
+	}
+}
+

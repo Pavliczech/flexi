@@ -172,6 +172,12 @@ HEADER
 
 			.logged {
 				overflow: hidden;
+				
+				@media (max-width:400px){
+					span {
+						display: none;
+					}
+				}
 
 				a {
 					font-weight: bold;
@@ -324,15 +330,19 @@ CONTENT
 						position: absolute;
 						top: 9px;
 						left: 17px;
-						width: 30px;
-						height: 30px;
-						line-height: 30px;
+						display: block;
+						width: 32px;
+						height: 32px;
+						line-height: 32px;
 						text-align: center;
 						content: "";
-						background: #1c1c1f;
 						font-family: FontAwesome;
+						font-size: 14px;
+						font-weight: normal;
 						color: rgba(255,255,255,0.3);
 						transition: 500ms;
+						border-radius: 30px;
+						background: rgba(0,0,0,0.2);
 					}
 
 					&:hover:before {

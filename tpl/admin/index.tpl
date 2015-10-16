@@ -45,14 +45,14 @@
 			<div class="user">
 				<img src="/theme/admin/img/lilbub_demo.jpg" class="avatar" />
 				<div class="logged">
-					Logged as <a href="#">wUFr</a>
+					<span>Logged as </span><a href="#">wUFr</a>
 				</div>
 			</div>
 			<div class="actions">
-				<a class="fa_b_warning">
+				<a class="notifications fa_b_warning">
 					<span>Notifications</span>
 				</a>
-				<a class="fa_b_cog">
+				<a class="settings fa_b_cog">
 					<span>Settings</span>
 				</a>
 				<a href="/admin/admin_logout=1" class="fa_b_sign-out">
@@ -153,6 +153,40 @@
 					<span>Some link</span>
 				</a>
 			</div>
+			
+			<div class="ui_dragndrop small">
+				<div class="area">
+					<div class="title fa_b_upload" data-title="Přetáhnutím sem, nahrajete soubory" data-uploading="Probíhá nahrávání.." data-error="Nahrávání selhalo" data-confirm="Nahrávání dokončeno"></div>
+				</div>
+			</div>
+			
+			<div class="ui_dragndrop small">
+				<div class="area active">
+					<div class="title fa_b_upload" data-title="Přetáhnutím sem, nahrajete soubory" data-uploading="Probíhá nahrávání.." data-error="Nahrávání selhalo" data-confirm="Nahrávání dokončeno"></div>
+				</div>
+			</div>
+			
+			<div class="ui_dragndrop small">
+				<div class="area uploading">
+					<div class="title fa_b_upload" data-title="Přetáhnutím sem, nahrajete soubory" data-uploading="Probíhá nahrávání.." data-error="Nahrávání selhalo" data-confirm="Nahrávání dokončeno"></div>
+					<div class="progress">
+						<div style="width:30%"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="ui_dragndrop small">
+				<div class="area confirm">
+					<div class="title fa_b_upload" data-title="Přetáhnutím sem, nahrajete soubory" data-uploading="Probíhá nahrávání.." data-error="Nahrávání selhalo" data-confirm="Nahrávání dokončeno"></div>
+				</div>
+			</div>
+			
+			<div class="ui_dragndrop small">
+				<div class="area error">
+					<div class="title fa_b_upload" data-title="Přetáhnutím sem, nahrajete soubory" data-uploading="Probíhá nahrávání.." data-error="Nahrávání selhalo" data-confirm="Nahrávání dokončeno"></div>
+				</div>
+			</div>
+			
 			
 			
 			<div class="ui_side_treemenu">
@@ -583,14 +617,28 @@
 						<button class="ui_button red">Denied</button>
 						<button class="ui_button dark">Dark</button>
 						<hr />
-						<button class="ui_button green ico fa_b_check">Confirm</button>
-						<button class="ui_button orange ico fa_b_pencil">Something</button>
-						<button class="ui_button red ico fa_b_times">Denied</button>
-						<button class="ui_button dark ico fa_b_eye">Dark</button>
+						<button class="ui_button blue inactive">inactive!</button>
+						<button class="ui_button blue ico_b fa_b_warning inactive">still inactive</button>
 						
 						<hr />
-						<button class="ui_button mobile_big green ico fa_b_check">.mobile_big</button>
-						<button class="ui_button mobile_big orange ico fa_b_pencil">Something</button>
+						<button class="ui_button green ico_b fa_b_check">.ico_b</button>
+						<button class="ui_button orange ico_b fa_b_pencil">Something</button>
+						<button class="ui_button red ico_b fa_b_times">Denied</button>
+						<button class="ui_button dark ico_b fa_b_eye">Dark</button>
+						
+						<hr />
+						<button class="ui_button green ico_a fa_a_check">.ico_a</button>
+						<button class="ui_button orange ico_a fa_a_pencil">Something</button>
+						<button class="ui_button red ico_a fa_a_times">Denied</button>
+						<button class="ui_button dark ico_a fa_a_eye">Dark</button>
+						
+						<hr />
+						<button class="ui_button mobile_big green ico_b fa_b_check">.mobile_big</button>
+						<button class="ui_button mobile_big orange ico_b fa_b_pencil">Something</button>
+
+						<hr />
+						<button class="ui_button small green ico_b fa_b_check">.small</button>
+						<button class="ui_button small orange ico_b fa_b_warning">Something</button>
 
 						
 					</div>
@@ -626,8 +674,8 @@
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class="options">
-							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
-							<button class="ui_button small red ico fa_b_times">Delete</button>
+							<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico_b fa_b_times">Delete</button>
 						</td>
 					</tr>
 					<tr>
@@ -636,8 +684,8 @@
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class="options">
-							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
-							<button class="ui_button small red ico fa_b_times">Delete</button>
+							<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico_b fa_b_times">Delete</button>
 						</td>
 					</tr>
 					<tr>
@@ -646,8 +694,8 @@
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class=" options">
-							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
-							<button class="ui_button small red ico fa_b_times">Delete</button>
+							<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico_b fa_b_times">Delete</button>
 						</td>
 					</tr>
 				</tbody>
