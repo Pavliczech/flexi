@@ -646,6 +646,14 @@
 				
 			</div>
 			
+			<br />
+			<div class="ui_status">status</div>
+			<div class="ui_status confirm">Confirm</div>
+			<div class="ui_status error">Error</div>
+			<div class="ui_status warning">Warning</div>
+			<div class="ui_status info">Info</div>
+			<br />
+			
 			
 			<table class="ui_table">
 				<thead>
@@ -660,17 +668,10 @@
 				<tbody>
 					<tr>
 						<td data-title="ID:">1</td>
-						<td data-title="Name:">Free Responsive Admin Center</td>
-						<td data-title="Type:">Admin template</td>
-						<td data-title="Date:">25.2.2015</td>
-						<td class="options">
-							<button class="ui_button small orange ico fa_b_pencil">Edit</button>
-							<button class="ui_button small red ico fa_b_times">Delete</button>
+						<td data-title="Name:">
+							Free Responsive Admin Center
+							<div class="ui_status confirm">Confirm</div>
 						</td>
-					</tr>
-					<tr>
-						<td data-title="ID:">1</td>
-						<td data-title="Name:">Free Responsive Admin Center</td>
 						<td data-title="Type:">Admin template</td>
 						<td data-title="Date:">25.2.2015</td>
 						<td class="options">
@@ -686,6 +687,20 @@
 						<td class="options">
 							<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
 							<button class="ui_button small red ico_b fa_b_times">Delete</button>
+						</td>
+					</tr>
+					<tr>
+						<td data-title="ID:">1</td>
+						<td data-title="Name:">
+							Free Responsive Admin Center
+							<div class="ui_status error">Confirm</div>
+						</td>
+						<td data-title="Type:">Admin template</td>
+						<td data-title="Date:">25.2.2015</td>
+						<td class="options">
+							<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+							<button class="ui_button small red ico_b fa_b_times">Delete</button>
+						
 						</td>
 					</tr>
 					<tr>
@@ -729,8 +744,8 @@
 								<td data-title="Type:">Admin template</td>
 								<td data-title="Date:">25.2.2015</td>
 								<td class="options">
-									<button class="ui_button small orange ico edit">Edit</button>
-									<button class="ui_button small red ico delete">Delete</button>
+									<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+									<button class="ui_button small red ico_b fa_b_times">Delete</button>
 								</td>
 							</tr>
 							<tr>
@@ -739,8 +754,8 @@
 								<td data-title="Type:">Admin template</td>
 								<td data-title="Date:">25.2.2015</td>
 								<td class="options">
-									<button class="ui_button small orange ico edit">Edit</button>
-									<button class="ui_button small red ico delete">Delete</button>
+									<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+									<button class="ui_button small red ico_b fa_b_times">Delete</button>
 								</td>
 							</tr>
 							<tr>
@@ -749,8 +764,8 @@
 								<td data-title="Type:">Admin template</td>
 								<td data-title="Date:">25.2.2015</td>
 								<td class="options">
-									<button class="ui_button small orange ico edit">Edit</button>
-									<button class="ui_button small red ico delete">Delete</button>
+									<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+									<button class="ui_button small red ico_b fa_b_times">Delete</button>
 								</td>
 							</tr>
 							<tr>
@@ -759,8 +774,8 @@
 								<td data-title="Type:">Admin template</td>
 								<td data-title="Date:">25.2.2015</td>
 								<td class=" options">
-									<button class="ui_button small orange ico edit">Edit</button>
-									<button class="ui_button small red ico delete">Delete</button>
+									<button class="ui_button small orange ico_b fa_b_pencil">Edit</button>
+									<button class="ui_button small red ico_b fa_b_times">Delete</button>
 								</td>
 							</tr>
 						</tbody>
