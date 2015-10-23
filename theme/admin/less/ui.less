@@ -168,8 +168,7 @@ UI WIDGET
 */
 .ui_box {
 	position: relative;
-	background: #FBFBFB;
-	border: 1px solid #F3F3F3;
+	background: white;
 	margin: 10px 0;
 	overflow: hidden;
 	border-radius: 5px;
@@ -782,7 +781,7 @@ UI FORM
 			}
 		}
 
-		.info {
+		div.info {
 			padding: 11px 15px;
 			font-size: 12px;
 			color: gray;
@@ -884,6 +883,215 @@ UI FORM
 				}
 			}
 		}
+	}
+}
+
+
+/*
+
+UI CHECKBOX (standalone style - can be used everywhere)
+
+*/
+.ui_check {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	height: 30px;
+	padding-left: 30px;
+	
+	input {
+		display: none;
+	}
+	
+	/* SPAN MUST USED AT ALL TIME */
+	span {
+		line-height: 30px;
+		margin-right: 5px;
+		color: #555555;
+		font-size: 13px;
+		
+		&:before {
+			.border-box();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-size: 19px;
+			content: "\f096";
+			color: #e2e2e2;
+			
+			&:hover {
+				color: gray;
+			}
+		}
+	}
+	&:hover span:before {
+		content: "\f14a";
+	}
+	
+	input:checked ~ span:before {
+		content: "\f14a";
+		color: #2c2c2c;
+	}
+	
+	&.confirm input:checked ~ span:before {
+		color: @color_confirm;
+	}
+	
+	&.error input:checked ~ span:before {
+		color: @color_delete;
+	}
+	
+	&.warning input:checked ~ span:before {
+		color: @color_edit;
+	}
+	
+	&.info input:checked ~ span:before {
+		color: @color_info;
+	}
+
+}
+
+.ui_form .item .ui_check {
+	margin: 5px -7px;
+}
+
+
+
+/*
+
+UI CHECK LIST
+// if you need more checks in 1 form item
+*/
+.ui_check_list {
+	padding: 8px 0;
+	
+	&.inline {
+		padding: 0 0 8px 0;
+		
+		&:after {
+			.clear();
+		}
+	}
+	
+	& > div {
+		margin: -8px 0;
+	}
+	
+	&.inline > div {
+		float: left;
+		margin: 0 20px -8px 0;
+	}
+}
+
+
+
+
+/*
+
+UI RADIO (standalone style - can be used everywhere)
+// basicaly same as ui_checkbox
+
+*/
+.ui_radio {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	height: 30px;
+	padding-left: 30px;
+	
+	input {
+		display: none;
+	}
+	
+	/* SPAN MUST USED AT ALL TIME */
+	span {
+		line-height: 30px;
+		margin-right: 5px;
+		color: #555555;
+		font-size: 13px;
+		
+		&:before {
+			.border-box();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-size: 19px;
+			content: "\f10c";
+			color: #e2e2e2;
+			
+			&:hover {
+				color: gray;
+			}
+		}
+	}
+	&:hover span:before {
+		content: "\f192";
+	}
+	
+	input:checked ~ span:before {
+		content: "\f192";
+		color: #2c2c2c;
+	}
+	
+	&.confirm input:checked ~ span:before {
+		color: @color_confirm;
+	}
+	
+	&.error input:checked ~ span:before {
+		color: @color_delete;
+	}
+	
+	&.warning input:checked ~ span:before {
+		color: @color_edit;
+	}
+	
+	&.info input:checked ~ span:before {
+		color: @color_info;
+	}
+
+}
+
+.ui_form .item .ui_radio {
+	margin: 5px -7px;
+}
+
+
+
+/*
+
+UI RADIO LIST
+// if you need more checks in 1 form item
+*/
+.ui_radio_list {
+	padding: 8px 0;
+	
+	&.inline {
+		padding: 0 0 8px 0;
+		
+		&:after {
+			.clear();
+		}
+	}
+	
+	& > div {
+		margin: -8px 0;
+	}
+	
+	&.inline > div {
+		float: left;
+		margin: 0 20px -8px 0;
 	}
 }
 

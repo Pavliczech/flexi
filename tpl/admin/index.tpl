@@ -139,6 +139,284 @@
 			{/if}
 			
 			
+			<div class="ui_box">
+				<div class="content">
+					<div class="row ui_form">
+						<div class="col-md-12">
+							<div class="item">
+								<label class="label required col-lg-3 col-md-6 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-5 col-md-6 col-sm-6 col-xs-12">
+									<input type="text" placeholder="ololololo" />
+								</div>
+							</div>
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-6 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-2 col-md-6 col-sm-6 col-xs-12">
+									<input type="text" value="read only" readonly="readonly" />
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Lorem ipsum</label>
+								<div class="input col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<select>
+										<option>Lorem ipsum dolor option in select</option>
+										<option>option in select</option>
+										<option>olololo</option>
+									</select>
+								</div>
+							</div>
+							
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checkbox</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_check">
+										<input type="checkbox" />
+										<span>Check this</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checkbox</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_check info">
+										<input type="checkbox" />
+										<span>Info</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checkbox</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_check confirm">
+										<input type="checkbox" />
+										<span>Confirm</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checkbox</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_check error">
+										<input type="checkbox" />
+										<span>Error</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checkbox</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_check warning">
+										<input type="checkbox" />
+										<span>Warning</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checkbox simple</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_check">
+										<input type="checkbox" />
+										<span></span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checks list</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<div class="ui_check_list">
+										<div>
+											<label class="ui_check confirm">
+												<input type="checkbox" />
+												<span>First checkbox</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_check delete">
+												<input type="checkbox" />
+												<span>Second checkbox</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_check confirm">
+												<input type="checkbox" />
+												<span>First checkbox</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_check delete">
+												<input type="checkbox" />
+												<span>Second checkbox</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Checks list inline</label>
+								<div class="col-lg-9 col-md-6 col-sm-12 col-xs-12">
+									<div class="ui_check_list inline">
+										<div>
+											<label class="ui_check confirm">
+												<input type="checkbox" />
+												<span>First checkbox</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_check delete">
+												<input type="checkbox" />
+												<span>Second checkbox</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_check confirm">
+												<input type="checkbox" />
+												<span>First checkbox</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_check delete">
+												<input type="checkbox" />
+												<span>Second checkbox</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_radio">
+										<input type="radio" name="radio" valie="1" />
+										<span>Radio this</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_radio info">
+										<input type="radio" name="radio" valie="2" />
+										<span>Info</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_radio confirm">
+										<input type="radio" name="radio" valie="3" />
+										<span>Confirm</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_radio error">
+										<input type="radio" name="radio" valie="4" />
+										<span>Error</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_radio warning">
+										<input type="radio" name="radio" valie="5" />
+										<span>Warning</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio simple</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<label class="ui_radio">
+										<input type="radio" name="radio" valie="6" />
+										<span></span>
+									</label>
+								</div>
+							</div>
+							
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio list</label>
+								<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+									<div class="ui_radio_list">
+										<div>
+											<label class="ui_radio warning">
+												<input type="radio" name="radio1" valie="1" />
+												<span>Radio item 1</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_radio confirm">
+												<input type="radio" name="radio1" valie="2" />
+												<span>Radio item 2</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_radio iinfo">
+												<input type="radio" name="radio1" valie="3" />
+												<span>Radio item 3</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item">
+								<label class="label col-lg-3 col-md-6 col-sm-12 col-xs-12">Radio list inline</label>
+								<div class="col-lg-9 col-md-6 col-sm-12 col-xs-12">
+									<div class="ui_radio_list inline">
+										<div>
+											<label class="ui_radio warning">
+												<input type="radio" name="radio1" valie="1" />
+												<span>Radio item 1</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_radio confirm">
+												<input type="radio" name="radio1" valie="2" />
+												<span>Radio item 2</span>
+											</label>
+										</div>
+										<div>
+											<label class="ui_radio iinfo">
+												<input type="radio" name="radio1" valie="3" />
+												<span>Radio item 3</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+		
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+			
 			<div class="ui_boxmenu">
 				<a href="#">
 					<div class="icon fa_b_info"></div>
